@@ -6,6 +6,13 @@ export enum BreakPoint {
 
 export enum Border {
     InputRegular = '1px solid #cdcdcd',
+    InputFocused = '1px solid #444444',
+    InputIncorrect = '1px solid #ff8282',
+}
+
+export enum BorderColor {
+    InputFocused = '#444444',
+    InputIncorrect = '#ff8282',
 }
 
 export enum FontFamily {
