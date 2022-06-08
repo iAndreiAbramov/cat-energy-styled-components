@@ -1,4 +1,4 @@
-import { BreakPoint } from 'constants/style-variables';
+import { BreakPoint, FontFamily } from 'constants/style-variables';
 import styled, { css } from 'styled-components';
 
 import { ButtonBgColor, ButtonTextColor, ColorType, IButtonProps } from './Button.types';
@@ -8,18 +8,24 @@ export const Button = styled.button<IButtonProps>`
     height: ${({ height }) => height || '40px'};
 
     box-sizing: border-box;
+
+    font-family: ${FontFamily.Oswald};
     text-transform: uppercase;
     font-style: normal;
     font-size: 16px;
     text-align: center;
 
+    appearance: none;
+    border: none;
+    cursor: pointer;
+
     @media (min-width: ${BreakPoint.Desktop}) {
         font-size: 20px;
     }
 
-    appearance: none;
-    border: none;
-    cursor: pointer;
+    @media (min-width: ${BreakPoint.Desktop}) {
+        font-size: 20px;
+    }
 
     ${(props) => {
         switch (props.colorType) {

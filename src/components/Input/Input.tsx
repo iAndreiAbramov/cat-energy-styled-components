@@ -1,4 +1,4 @@
-import { Border, BreakPoint } from 'constants/style-variables';
+import { Border, BreakPoint, FontFamily } from 'constants/style-variables';
 import styled from 'styled-components';
 
 export const Input = styled.input.attrs((props) => ({
@@ -8,6 +8,8 @@ export const Input = styled.input.attrs((props) => ({
 
     box-sizing: border-box;
     padding: 10px 18px;
+
+    font-family: ${FontFamily.Oswald};
 
     appearance: none;
     height: 52px;

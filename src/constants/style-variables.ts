@@ -7,3 +7,12 @@ export enum BreakPoint {
 export enum Border {
     InputRegular = '1px solid #cdcdcd',
 }
+
+export enum FontFamily {
+    Oswald = "'Oswald', 'Arial', sans-serif",
+}
+
+export enum FontWeight {
+    Title = 500,
+    Regular = 400,
+}
