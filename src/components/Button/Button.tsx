@@ -1,4 +1,4 @@
-import { StyleVariables } from 'constants/style-variables';
+import { BreakPoint } from 'constants/style-variables';
 import styled, { css } from 'styled-components';
 
 import { ButtonBgColor, ButtonTextColor, ColorType, IButtonProps } from './Button.types';
@@ -7,12 +7,13 @@ export const Button = styled.button<IButtonProps>`
     width: ${({ width }) => width || '100%'};
     height: ${({ height }) => height || '40px'};
 
+    box-sizing: border-box;
     text-transform: uppercase;
     font-style: normal;
     font-size: 16px;
     text-align: center;
 
-    @media (min-width: ${StyleVariables.Desktop}) {
+    @media (min-width: ${BreakPoint.Desktop}) {
         font-size: 20px;
     }
 
