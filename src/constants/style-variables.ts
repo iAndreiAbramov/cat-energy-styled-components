@@ -21,6 +21,7 @@ export enum FontFamily {
 
 export enum TextColor {
     Dark = '#000000',
+    Light = '#ffffff',
 }
 
 export enum FontWeight {
