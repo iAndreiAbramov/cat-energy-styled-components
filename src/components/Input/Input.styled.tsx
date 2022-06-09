@@ -1,4 +1,4 @@
-import { Border, BorderColor, BreakPoint, FontFamily } from 'constants/style-variables';
+import { Border, BorderColor, BreakPoint, FontFamily, FontWeight } from 'constants/style-variables';
 import styled, { css } from 'styled-components';
 
 interface IInputStyled {
@@ -12,7 +12,7 @@ export const StyledInputLabel = styled.label`
     gap: 20px;
 
     font-family: ${FontFamily.Oswald};
-    font-weight: 400;
+    font-weight: ${FontWeight.Regular};
     font-size: 20px;
     text-transform: uppercase;
 
@@ -30,6 +30,7 @@ export const StyledInput = styled.input<IInputStyled>`
     max-width: 100%;
 
     font-family: ${FontFamily.Oswald};
+    font-weight: ${FontWeight.Regular};
     font-size: 20px;
     text-transform: uppercase;
 

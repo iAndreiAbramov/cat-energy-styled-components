@@ -1,9 +1,9 @@
-import { BreakPoint, FontFamily, TextColor } from 'constants/style-variables';
+import { BreakPoint, FontFamily, FontWeight, TextColor } from 'constants/style-variables';
 import styled from 'styled-components';
 
 export const StyledMainTitle = styled.h1`
     font-family: ${FontFamily.Oswald};
-    font-weight: 400;
+    font-weight: ${FontWeight.Regular};
     font-size: 60px;
     line-height: 1;
     color: ${({ color }) => (color ? color : TextColor.Dark)};

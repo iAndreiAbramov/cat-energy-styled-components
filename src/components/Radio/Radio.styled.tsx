@@ -1,4 +1,4 @@
-import { Border, BreakPoint, FontFamily } from 'constants/style-variables';
+import { Border, BreakPoint, FontFamily, FontWeight } from 'constants/style-variables';
 import styled from 'styled-components';
 
 interface IStyledRadioLabel {
@@ -12,7 +12,7 @@ export const StyledRadioLabel = styled.label<IStyledRadioLabel>`
 
     font-family: ${FontFamily.Oswald};
     font-size: 20px;
-    font-weight: 400;
+    font-weight: ${FontWeight.Regular};
     text-transform: uppercase;
 
     opacity: ${({ isDisabled }) => (isDisabled ? 0.3 : 1)};
