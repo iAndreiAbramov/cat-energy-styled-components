@@ -1,5 +1,6 @@
 import React from 'react';
 import { StyledButton } from 'atomic/StyledButton';
+import { StyledTextarea } from 'atomic/StyledTextarea/StyledTextarea';
 
 import { Checkbox } from 'components/Checkbox';
 import { Input } from 'components/Input';
@@ -15,6 +16,8 @@ export const App: React.FC = () => {
             <Checkbox labelText="сахарозаменитель" name="Дополнительно" value="Сахарозаменитель" />
             <Checkbox labelText="сахарозаменитель" name="Дополнительно" value="Сахарозаменитель" />
             <Radio labelText="похудение" name="Цель" value="Похудение" />
+            <Radio labelText="Набор массы" name="Цель" value="Набор массы" />
+            <StyledTextarea placeholder="Расскажите обо всех повадках кота" />
         </>
     );
 };

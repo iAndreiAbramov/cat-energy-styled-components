@@ -6,7 +6,7 @@ export interface IInputProps {
     name: string;
     value?: string | number;
     labelText: string;
-    type: 'text' | 'email';
+    type: 'text' | 'email' | 'tel';
     isIncorrect?: boolean;
     width?: string;
     placeholder?: string;

@@ -3,7 +3,7 @@ import styled, { css } from 'styled-components';
 
 interface IInputStyled {
     isIncorrect?: boolean;
-    type: 'text' | 'email';
+    type: 'text' | 'email' | 'tel';
 }
 
 export const StyledInputLabel = styled.label`
@@ -60,6 +60,14 @@ export const StyledInput = styled.input<IInputStyled>`
                             ? '/icons/email-red.svg'
                             : '/icons/email-green.svg'});
                     }
+                `;
+            case 'tel':
+                return css`
+                    background-image: url(${isIncorrect
+                        ? '/icons/phone-red.svg'
+                        : '/icons/phone.svg'});
+                    background-repeat: no-repeat;
+                    background-position: right 20px top 50%;
                 `;
             default: {
                 return css``;

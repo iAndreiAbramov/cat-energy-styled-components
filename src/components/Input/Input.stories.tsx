@@ -25,7 +25,7 @@ TextIncorrect.args = {
 export const Email = Default.bind({});
 Email.args = {
     width: '300px',
-    placeholder: 'Email',
+    placeholder: 'кuklachev@gmail.com',
     type: 'email',
     labelText: 'Email:*',
 };
@@ -33,8 +33,25 @@ Email.args = {
 export const EmailIncorrect = Default.bind({});
 EmailIncorrect.args = {
     width: '300px',
-    placeholder: 'Incorrect',
+    placeholder: 'кuklachev@gmail.com',
     type: 'email',
     isIncorrect: true,
-    labelText: 'email:*',
+    labelText: 'e-mail:*',
+};
+
+export const Tel = Default.bind({});
+Tel.args = {
+    width: '300px',
+    placeholder: '8 (960) 900-60-90',
+    type: 'tel',
+    labelText: 'Телефон:*',
+};
+
+export const TelIncorrect = Default.bind({});
+TelIncorrect.args = {
+    width: '300px',
+    placeholder: '8 (960) 900-60-90',
+    type: 'tel',
+    labelText: 'Телефон:*',
+    isIncorrect: true,
 };
