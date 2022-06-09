@@ -1,9 +1,27 @@
 import { Border, BorderColor, BreakPoint, FontFamily } from 'constants/style-variables';
 import styled, { css } from 'styled-components';
 
-import { IInputProps } from './StyledInput.types';
+interface IInputStyled {
+    isIncorrect?: boolean;
+    type: 'text' | 'email';
+}
 
-export const StyledInput = styled.input<IInputProps>`
+export const StyledInputLabel = styled.label`
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    font-family: ${FontFamily.Oswald};
+    font-weight: 400;
+    font-size: 20px;
+    text-transform: uppercase;
+
+    @media (max-width: ${BreakPoint.Tablet}) {
+        font-size: 16px;
+    }
+`;
+
+export const StyledInput = styled.input<IInputStyled>`
     display: block;
 
     width: ${({ width }) => width || '100%'};

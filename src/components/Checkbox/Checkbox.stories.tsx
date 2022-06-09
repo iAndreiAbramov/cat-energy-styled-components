@@ -3,9 +3,7 @@ import { ComponentMeta, ComponentStory } from '@storybook/react';
 
 import { Checkbox } from './Checkbox';
 
-export default {
-    labelText: 'сахарозаменитель',
-} as ComponentMeta<typeof Checkbox>;
+export default {} as ComponentMeta<typeof Checkbox>;
 
 export const Default: ComponentStory<typeof Checkbox> = (args) => <Checkbox {...args} />;
 
