@@ -1,11 +1,12 @@
 import { Border, BorderColor, BreakPoint, FontFamily } from 'constants/style-variables';
 import styled, { css } from 'styled-components';
 
-import { IInputProps } from './Input.types';
+import { IInputProps } from './StyledInput.types';
 
-export const Input = styled.input<IInputProps>`
+export const StyledInput = styled.input<IInputProps>`
+    display: block;
+
     width: ${({ width }) => width || '100%'};
-
     box-sizing: border-box;
     padding: 10px 18px;
     max-width: 100%;

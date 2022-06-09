@@ -1,12 +1,14 @@
 import React from 'react';
 import { ComponentMeta, ComponentStory } from '@storybook/react';
 
-import { Button } from './Button';
-import { ColorType } from './Button.types';
+import { StyledButton } from './StyledButton';
+import { ColorType } from './StyledButton.types';
 
-export default {} as ComponentMeta<typeof Button>;
+export default {} as ComponentMeta<typeof StyledButton>;
 
-export const Default: ComponentStory<typeof Button> = (args) => <Button {...args}>Каталог</Button>;
+export const Default: ComponentStory<typeof StyledButton> = (args) => (
+    <StyledButton {...args}>Каталог</StyledButton>
+);
 
 export const Gray = Default.bind({});
 Gray.args = {

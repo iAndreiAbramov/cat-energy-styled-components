@@ -1,12 +1,13 @@
 import { BreakPoint, FontFamily } from 'constants/style-variables';
 import styled, { css } from 'styled-components';
 
-import { ButtonBgColor, ButtonTextColor, ColorType, IButtonProps } from './Button.types';
+import { ButtonBgColor, ButtonTextColor, ColorType, IButtonProps } from './StyledButton.types';
 
-export const Button = styled.button<IButtonProps>`
+export const StyledButton = styled.button<IButtonProps>`
+    display: block;
+
     width: ${({ width }) => width || '100%'};
     height: ${({ height }) => height || '40px'};
-
     box-sizing: border-box;
 
     font-family: ${FontFamily.Oswald};

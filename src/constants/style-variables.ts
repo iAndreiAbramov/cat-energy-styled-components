@@ -19,6 +19,10 @@ export enum FontFamily {
     Oswald = "'Oswald', 'Arial', sans-serif",
 }
 
+export enum TextColor {
+    Dark = '#000000',
+}
+
 export enum FontWeight {
     Title = 500,
     Regular = 400,

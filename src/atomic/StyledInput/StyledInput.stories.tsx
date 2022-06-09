@@ -1,11 +1,11 @@
 import React from 'react';
 import { ComponentMeta, ComponentStory } from '@storybook/react';
 
-import { Input } from './Input';
+import { StyledInput } from './StyledInput';
 
-export default {} as ComponentMeta<typeof Input>;
+export default {} as ComponentMeta<typeof StyledInput>;
 
-export const Default: ComponentStory<typeof Input> = (args) => <Input {...args} />;
+export const Default: ComponentStory<typeof StyledInput> = (args) => <StyledInput {...args} />;
 
 export const Text = Default.bind({});
 Text.args = {

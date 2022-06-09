@@ -1,14 +1,18 @@
 import React from 'react';
+import { StyledButton } from 'atomic/StyledButton';
+import { StyledInput } from 'atomic/StyledInput';
 
-import { Button } from 'components/Button';
-import { Input } from 'components/Input';
+import { Checkbox } from 'components/Checkbox';
 
 export const App: React.FC = () => {
     return (
-        <div>
-            <Button width="300px">Catalog</Button>
-            <Input type="text" placeholder="Барсик" width="300px" />
-            <Input type="email" placeholder="email" width="300px" />
-        </div>
+        <>
+            <StyledButton width="300px">Catalog</StyledButton>
+            <StyledInput type="text" placeholder="Барсик" width="300px" />
+            <StyledInput type="email" placeholder="email" width="300px" />
+            <Checkbox labelText="сахарозаменитель" />
+            <Checkbox labelText="сахарозаменитель" />
+            <Checkbox labelText="сахарозаменитель" />
+        </>
     );
 };
