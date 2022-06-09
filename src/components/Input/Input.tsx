@@ -3,6 +3,8 @@ import React from 'react';
 import { StyledInput, StyledInputLabel } from './Input.styled';
 
 export interface IInputProps {
+    name: string;
+    value?: string | number;
     labelText: string;
     type: 'text' | 'email';
     isIncorrect?: boolean;
@@ -11,6 +13,8 @@ export interface IInputProps {
 }
 
 export const Input: React.FC<IInputProps> = ({
+    name,
+    value,
     type,
     labelText,
     isIncorrect,
@@ -25,6 +29,8 @@ export const Input: React.FC<IInputProps> = ({
                 type={type}
                 width={width}
                 placeholder={placeholder}
+                name={name}
+                value={value}
             />
         </StyledInputLabel>
     );
