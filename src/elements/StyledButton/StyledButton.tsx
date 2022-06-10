@@ -1,7 +1,18 @@
-import { BreakPoint, FontFamily, FontWeight } from 'constants/style-variables';
+import {
+    BgColor,
+    BreakPoint,
+    ButtonColorType,
+    ButtonTextColor,
+    FontFamily,
+    FontWeight,
+} from 'constants/style-variables';
 import styled, { css } from 'styled-components';
 
-import { ButtonBgColor, ButtonTextColor, ColorType, IButtonProps } from './StyledButton.types';
+export interface IButtonProps {
+    width?: string;
+    height?: string;
+    colorType?: ButtonColorType;
+}
 
 export const StyledButton = styled.button<IButtonProps>`
     display: block;
@@ -31,31 +42,31 @@ export const StyledButton = styled.button<IButtonProps>`
 
     ${(props) => {
         switch (props.colorType) {
-            case ColorType.Gray:
+            case ButtonColorType.Gray:
                 return css`
-                    background-color: ${ButtonBgColor.BasicGray};
+                    background-color: ${BgColor.BasicGray};
                     color: ${ButtonTextColor.SpecialDarkGray};
 
                     &:hover {
-                        background-color: ${ButtonBgColor.BasicGrayHovered};
+                        background-color: ${BgColor.BasicGrayHovered};
                     }
 
                     &:active {
-                        background-color: ${ButtonBgColor.BasicGrayPressed};
+                        background-color: ${BgColor.BasicGrayPressed};
                         opacity: 0.3;
                     }
                 `;
             default:
                 return css`
-                    background-color: ${ButtonBgColor.BasicGreen};
+                    background-color: ${BgColor.BasicGreen};
                     color: ${ButtonTextColor.BasicWhite};
 
                     &:hover {
-                        background-color: ${ButtonBgColor.BasicGreenHovered};
+                        background-color: ${BgColor.BasicGreenHovered};
                     }
 
                     &:active {
-                        background-color: ${ButtonBgColor.BasicGreenPressed};
+                        background-color: ${BgColor.BasicGreenPressed};
                         opacity: 0.3;
                     }
                 `;

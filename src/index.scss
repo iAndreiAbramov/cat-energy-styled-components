@@ -9,5 +9,36 @@ body {
         font-weight: 400;
         font-style: normal;
         line-height: 1;
+
+        box-sizing: border-box;
+    }
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    border: 0 none;
+    clip-path: inset(100%);
+}
+
+#root {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 1220px;
+    padding-left: 30px;
+    padding-right: 30px;
+
+    @media screen and (max-width: 767px) {
+        padding-left: 20px;
+        padding-right: 20px;
     }
 }

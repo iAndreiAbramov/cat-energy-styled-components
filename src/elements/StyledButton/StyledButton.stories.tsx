@@ -1,8 +1,8 @@
 import React from 'react';
 import { ComponentMeta, ComponentStory } from '@storybook/react';
+import { ButtonColorType } from 'constants/style-variables';
 
 import { StyledButton } from './StyledButton';
-import { ColorType } from './StyledButton.types';
 
 export default {} as ComponentMeta<typeof StyledButton>;
 
@@ -12,14 +12,14 @@ export const Default: ComponentStory<typeof StyledButton> = (args) => (
 
 export const Gray = Default.bind({});
 Gray.args = {
-    colorType: ColorType.Gray,
+    colorType: ButtonColorType.Gray,
     width: '300px',
     height: '40px',
 };
 
 export const Green = Default.bind({});
 Green.args = {
-    colorType: ColorType.Green,
+    colorType: ButtonColorType.Green,
     width: '300px',
     height: '40px',
 };

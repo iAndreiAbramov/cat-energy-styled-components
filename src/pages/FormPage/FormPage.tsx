@@ -6,11 +6,13 @@ import { StyledTextarea } from 'elements/StyledTextarea';
 import { Checkbox } from 'components/Checkbox';
 import { FooterSocial } from 'components/FooterSocial';
 import { Input } from 'components/Input';
+import { PageHeader } from 'components/PageHeader';
 import { Radio } from 'components/Radio';
 
 export const FormPage: React.FC = () => {
     return (
         <>
+            <PageHeader />
             <div>Form page</div>
             <StyledButton width="300px">Catalog</StyledButton>
             <Input type="text" placeholder="Барсик" width="300px" labelText="Name:*" name="Имя" />
