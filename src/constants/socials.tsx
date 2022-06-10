@@ -19,7 +19,7 @@ const StyledVkIcon = styled(VkIcon)`
         opacity: 0.6;
     }
 
-    @media (max-width: ${BreakPoint.Tablet}) {
+    @media (max-width: ${BreakPoint.MobileTop}) {
         width: 22px;
         height: 16px;
     }
@@ -37,7 +37,7 @@ const StyledInstaIcon = styled(InstaIcon)`
         opacity: 0.6;
     }
 
-    @media (max-width: ${BreakPoint.Tablet}) {
+    @media (max-width: ${BreakPoint.MobileTop}) {
         width: 16px;
         height: 16px;
     }
@@ -55,7 +55,7 @@ const StyledFacebookIcon = styled(FacebookIcon)`
         opacity: 0.6;
     }
 
-    @media (max-width: ${BreakPoint.Tablet}) {
+    @media (max-width: ${BreakPoint.MobileTop}) {
         width: 10px;
         height: 16px;
     }

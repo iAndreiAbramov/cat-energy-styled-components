@@ -8,7 +8,7 @@ export const StyledMainTitle = styled.h1`
     line-height: 1;
     color: ${({ color }) => (color ? color : TextColor.Dark)};
 
-    @media (max-width: ${BreakPoint.Tablet}) {
+    @media (max-width: ${BreakPoint.MobileTop}) {
         font-size: 36px;
     }
 `;

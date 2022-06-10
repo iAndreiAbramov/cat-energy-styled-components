@@ -1,7 +1,7 @@
 import React from 'react';
-import { StyledButton } from 'atomic/StyledButton';
-import { StyledTextarea } from 'atomic/StyledTextarea/StyledTextarea';
 import { socials } from 'constants/socials';
+import { StyledButton } from 'elements/StyledButton';
+import { StyledTextarea } from 'elements/StyledTextarea/StyledTextarea';
 
 import { Checkbox } from 'components/Checkbox';
 import { FooterSocial } from 'components/FooterSocial';

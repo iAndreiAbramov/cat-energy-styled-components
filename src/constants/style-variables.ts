@@ -1,6 +1,8 @@
 export enum BreakPoint {
-    Mobile = '320px',
-    Tablet = '768px',
+    MobileLow = '320px',
+    MobileTop = '767px',
+    TabletLow = '768px',
+    TabletTop = '1219px',
     Desktop = '1220px',
 }
 
@@ -17,6 +19,7 @@ export enum BorderColor {
 
 export enum FontFamily {
     Oswald = "'Oswald', 'Arial', sans-serif",
+    Arial = "'Arial', sans-serif",
 }
 
 export enum TextColor {

@@ -17,7 +17,7 @@ export const StyledRadioLabel = styled.label<IStyledRadioLabel>`
 
     opacity: ${({ isDisabled }) => (isDisabled ? 0.3 : 1)};
 
-    @media (max-width: ${BreakPoint.Tablet}) {
+    @media (max-width: ${BreakPoint.MobileTop}) {
         font-size: 16px;
     }
 `;

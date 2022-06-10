@@ -21,7 +21,7 @@ export const StyledTextarea = styled.textarea`
         outline: ${Border.InputFocused};
     }
 
-    @media (max-width: ${BreakPoint.Tablet}) {
+    @media (max-width: ${BreakPoint.MobileTop}) {
         height: 150px;
         font-size: 16px;
     }

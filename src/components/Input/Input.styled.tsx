@@ -16,7 +16,7 @@ export const StyledInputLabel = styled.label`
     font-size: 20px;
     text-transform: uppercase;
 
-    @media (max-width: ${BreakPoint.Tablet}) {
+    @media (max-width: ${BreakPoint.MobileTop}) {
         font-size: 16px;
     }
 `;
@@ -76,7 +76,7 @@ export const StyledInput = styled.input<IInputStyled>`
         }
     }};
 
-    @media (max-width: ${BreakPoint.Tablet}) {
+    @media (max-width: ${BreakPoint.MobileTop}) {
         height: 40px;
         font-size: 16px;
     }
