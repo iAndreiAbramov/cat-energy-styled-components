@@ -12,6 +12,7 @@ export enum Border {
     InputIncorrect = '1px solid #ff8282',
     NavItemActive = '2px solid #68B738',
     NavItemMobile = '1px solid #E6E6E6',
+    FooterItemMobile = '1px solid #D9D9D9',
 }
 
 export enum BorderColor {

@@ -6,6 +6,7 @@ import { StyledTextarea } from 'elements/StyledTextarea';
 import { Checkbox } from 'components/Checkbox';
 import { FooterSocial } from 'components/FooterSocial';
 import { Input } from 'components/Input';
+import { PageFooter } from 'components/PageFooter';
 import { PageHeader } from 'components/PageHeader';
 import { Radio } from 'components/Radio';
 
@@ -26,6 +27,7 @@ export const FormPage: React.FC = () => {
             {socials.map((social) => (
                 <FooterSocial social={social} key={social.name} />
             ))}
+            <PageFooter />
         </>
     );
 };

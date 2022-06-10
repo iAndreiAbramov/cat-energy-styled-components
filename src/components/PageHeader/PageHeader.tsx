@@ -1,6 +1,7 @@
 import React, { useCallback, useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { AppRoute } from 'constants/AppRoute';
+import { HiddenHint } from 'elements/HiddenHint';
 import { StyledTextLogo } from 'elements/StyledTextLogo';
 
 import { HeaderLogo } from 'components/HeaderLogo';
@@ -42,7 +43,7 @@ export const PageHeader: React.FC = () => {
                 </HeaderNavList>
             </HeaderNavigation>
             <HeaderBurger isOpened={isDropdownOpened} onClick={handleBurgerClick}>
-                <span className="visually-hidden">Открыть меню</span>
+                <HiddenHint className="visually-hidden">Открыть меню</HiddenHint>
                 <BurgerDash />
                 <BurgerDash />
                 <BurgerDash />

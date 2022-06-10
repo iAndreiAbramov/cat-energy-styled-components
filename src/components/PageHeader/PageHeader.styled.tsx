@@ -82,6 +82,7 @@ export const HeaderNavigation = styled.nav<{ isOpened: boolean }>`
         position: absolute;
         top: 100%;
         left: 0;
+        z-index: 1;
 
         width: 100%;
         box-sizing: border-box;
