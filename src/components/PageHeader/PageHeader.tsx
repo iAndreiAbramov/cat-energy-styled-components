@@ -31,13 +31,22 @@ export const PageHeader: React.FC = () => {
             </Link>
             <HeaderNavigation isOpened={isDropdownOpened}>
                 <HeaderNavList isOpened={isDropdownOpened}>
-                    <HeaderNavItem isActive={pathname === AppRoute.Home()}>
+                    <HeaderNavItem
+                        isActive={pathname === AppRoute.Home()}
+                        isWithPromo={pathname === AppRoute.Home()}
+                    >
                         <Link to={AppRoute.Home()}>главная</Link>
                     </HeaderNavItem>
-                    <HeaderNavItem isActive={pathname === AppRoute.Catalog()}>
+                    <HeaderNavItem
+                        isActive={pathname === AppRoute.Catalog()}
+                        isWithPromo={pathname === AppRoute.Home()}
+                    >
                         <Link to={AppRoute.Catalog()}>каталог продукции</Link>
                     </HeaderNavItem>
-                    <HeaderNavItem isActive={pathname === AppRoute.Form()}>
+                    <HeaderNavItem
+                        isActive={pathname === AppRoute.Form()}
+                        isWithPromo={pathname === AppRoute.Home()}
+                    >
                         <Link to={AppRoute.Form()}>подбор программы</Link>
                     </HeaderNavItem>
                 </HeaderNavList>

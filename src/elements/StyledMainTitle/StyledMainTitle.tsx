@@ -6,9 +6,10 @@ export const StyledMainTitle = styled.h1`
     font-weight: ${FontWeight.Regular};
     font-size: 60px;
     line-height: 1;
-    color: ${({ color }) => (color ? color : TextColor.Dark)};
+    color: ${TextColor.Dark};
 
     @media (max-width: ${BreakPoint.MobileTop}) {
         font-size: 36px;
+        color: ${TextColor.Light};
     }
 `;

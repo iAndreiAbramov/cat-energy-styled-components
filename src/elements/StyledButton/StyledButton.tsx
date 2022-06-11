@@ -18,7 +18,7 @@ export const StyledButton = styled.button<IButtonProps>`
     display: block;
 
     width: ${({ width }) => width || '100%'};
-    height: ${({ height }) => height || '40px'};
+    height: ${({ height }) => height || '100%'};
     box-sizing: border-box;
 
     font-family: ${FontFamily.Oswald};

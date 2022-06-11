@@ -1,15 +1,19 @@
 import { BgColor, Border, BreakPoint, FontFamily } from 'constants/style-variables';
+import { StyledContainer } from 'elements/StyledContainer';
 import styled from 'styled-components';
 
 export const FooterWrapper = styled.footer`
+    width: 100%;
+    background-color: ${BgColor.BasicGray};
+`;
+
+export const FooterContentWrapper = styled(StyledContainer)`
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
 
-    width: 100%;
-
-    background-color: ${BgColor.BasicGray};
+    margin: 0 auto;
 
     @media (min-width: ${BreakPoint.TabletLow}) {
         flex-direction: row;

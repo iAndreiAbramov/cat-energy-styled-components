@@ -10,7 +10,8 @@ export enum Border {
     InputRegular = '1px solid #cdcdcd',
     InputFocused = '1px solid #444444',
     InputIncorrect = '1px solid #ff8282',
-    NavItemActive = '2px solid #68B738',
+    NavItemActiveDark = '2px solid #68B738',
+    NavItemActiveLight = '2px solid #ffffff',
     NavItemMobile = '1px solid #E6E6E6',
     FooterItemMobile = '1px solid #D9D9D9',
 }

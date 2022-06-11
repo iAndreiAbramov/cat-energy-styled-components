@@ -2,24 +2,31 @@ import { BgColor, Border, BreakPoint, FontWeight, TextColor } from 'constants/st
 import styled, { css } from 'styled-components';
 
 export const HeaderWrapper = styled.header`
+    grid-column: page-start/page-end;
+    grid-row: header-start/header-end;
+    z-index: 9;
+
     position: relative;
     display: flex;
     align-items: center;
     justify-content: space-between;
 
-    padding-top: 10px;
-    padding-bottom: 20px;
+    padding-top: 24px;
+    padding-bottom: 24px;
+    height: 64px;
 
     width: 100%;
 
-    @media (min-width: ${BreakPoint.TabletLow}) and (max-width: ${BreakPoint.TabletLow}) {
-        padding-top: 24px;
-        padding-bottom: 34px;
+    @media (min-width: ${BreakPoint.TabletLow}) and (max-width: ${BreakPoint.TabletTop}) {
+        padding-top: 42px;
+        padding-bottom: 42px;
+        height: 110px;
     }
 
     @media (min-width: ${BreakPoint.Desktop}) {
-        padding-top: 53px;
-        padding-bottom: 58px;
+        padding-top: 70px;
+        padding-bottom: 42px;
+        height: 140px;
     }
 `;
 
@@ -76,13 +83,13 @@ export const HeaderNavigation = styled.nav<{ isOpened: boolean }>`
     display: flex;
     align-items: center;
 
-    @media (max-width: ${BreakPoint.TabletLow}) {
+    @media (max-width: ${BreakPoint.MobileTop}) {
         display: ${({ isOpened }) => (isOpened ? 'flex' : 'none')};
         justify-content: center;
         position: absolute;
         top: 100%;
         left: 0;
-        z-index: 1;
+        z-index: 10;
 
         width: 100%;
         box-sizing: border-box;
@@ -98,13 +105,13 @@ export const HeaderNavList = styled.ul<{ isOpened: boolean }>`
     gap: 34px;
     width: 100%;
 
-    @media (max-width: ${BreakPoint.TabletLow}) {
+    @media (max-width: ${BreakPoint.MobileTop}) {
         flex-direction: column;
         gap: 0;
     }
 `;
 
-export const HeaderNavItem = styled.li<{ isActive: boolean }>`
+export const HeaderNavItem = styled.li<{ isActive: boolean; isWithPromo?: boolean }>`
     position: relative;
     text-transform: uppercase;
 
@@ -148,10 +155,33 @@ export const HeaderNavItem = styled.li<{ isActive: boolean }>`
                         left: 0;
                         right: 0;
                         width: 100%;
-                        border-bottom: ${Border.NavItemActive};
+                        border-bottom: ${Border.NavItemActiveDark};
                     }
                 `;
             }
         }}
+    }
+
+    @media (min-width: ${BreakPoint.Desktop}) {
+        color: ${({ isWithPromo }) => (isWithPromo ? TextColor.Light : TextColor.Dark)}
+            ${({ isActive, isWithPromo }) => {
+                if (isActive && isWithPromo) {
+                    return css`
+                        color: ${TextColor.Light};
+                        & a {
+                            color: ${TextColor.Light};
+                        }
+                        &:after {
+                            content: '';
+                            position: absolute;
+                            bottom: -10px;
+                            left: 0;
+                            right: 0;
+                            width: 100%;
+                            border-bottom: ${Border.NavItemActiveLight};
+                        }
+                    `;
+                }
+            }};
     }
 `;

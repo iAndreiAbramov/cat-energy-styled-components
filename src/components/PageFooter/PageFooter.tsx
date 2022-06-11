@@ -7,6 +7,7 @@ import { FooterSocial } from 'components/FooterSocial';
 
 import {
     AcademyLogoWrapper,
+    FooterContentWrapper,
     FooterWrapper,
     LogoWrapper,
     SocialsWrapper,
@@ -14,19 +15,21 @@ import {
 
 export const PageFooter: React.FC = () => {
     return (
-        <FooterWrapper className="container">
-            <LogoWrapper>
-                <StyledTextLogo />
-            </LogoWrapper>
-            <SocialsWrapper>
-                {socials.map((social) => (
-                    <FooterSocial social={social} key={social.name} />
-                ))}
-            </SocialsWrapper>
-            <AcademyLogoWrapper>
-                <span>HTML Academy</span>
-                <AcademyLogo />
-            </AcademyLogoWrapper>
+        <FooterWrapper>
+            <FooterContentWrapper>
+                <LogoWrapper>
+                    <StyledTextLogo />
+                </LogoWrapper>
+                <SocialsWrapper>
+                    {socials.map((social) => (
+                        <FooterSocial social={social} key={social.name} />
+                    ))}
+                </SocialsWrapper>
+                <AcademyLogoWrapper>
+                    <span>HTML Academy</span>
+                    <AcademyLogo />
+                </AcademyLogoWrapper>
+            </FooterContentWrapper>
         </FooterWrapper>
     );
 };

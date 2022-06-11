@@ -40,7 +40,7 @@ export const StyledCheckboxVisible = styled.div`
     border: ${Border.InputRegular};
 
     ${StiledCheckboxHidden}:checked + & {
-        background-image: url('/icons/checked.svg');
+        background-image: url('/img/icons/checked.svg');
         background-repeat: no-repeat;
         background-position: center center;
     }

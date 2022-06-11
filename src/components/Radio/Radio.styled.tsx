@@ -42,7 +42,7 @@ export const StyledRadioVisible = styled.div`
     border-radius: 50%;
 
     ${StyledRadioHidden}:checked + & {
-        background-image: url('/icons/radio-active.svg');
+        background-image: url('/img/icons/radio-active.svg');
         background-repeat: no-repeat;
         background-position: center center;
     }

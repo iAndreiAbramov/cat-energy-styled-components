@@ -8,18 +8,23 @@ export const HeaderLogo: React.FC = () => {
         <LogoWrapper>
             <picture>
                 <source
-                    srcSet="/icons/logo-tablet.svg"
+                    srcSet="/img/icons/logo-tablet.svg"
                     media={`(min-width: ${BreakPoint.TabletLow}) and (max-width: ${BreakPoint.TabletTop})`}
                     width="174"
                     height="52"
                 />
                 <source
-                    srcSet="/icons/logo-desktop.svg"
+                    srcSet="/img/icons/logo-desktop.svg"
                     media={`(min-width: ${BreakPoint.Desktop})`}
                     width="202"
                     height="60"
                 />
-                <img src="/icons/logo-mobile.svg" alt="Логотип Cat Energy" width="34" height="38" />
+                <img
+                    src="/img/icons/logo-mobile.svg"
+                    alt="Логотип Cat Energy"
+                    width="34"
+                    height="38"
+                />
             </picture>
         </LogoWrapper>
     );
