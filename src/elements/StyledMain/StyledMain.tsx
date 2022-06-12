@@ -6,4 +6,5 @@ export const StyledMain = styled.main`
     align-items: center;
 
     width: 100%;
+    max-width: 1600px;
 `;

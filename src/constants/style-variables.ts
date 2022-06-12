@@ -1,5 +1,4 @@
 export enum BreakPoint {
-    MobileLow = '320px',
     MobileTop = '767px',
     TabletLow = '768px',
     TabletTop = '1219px',
@@ -7,13 +6,14 @@ export enum BreakPoint {
 }
 
 export enum Border {
+    Helper = '1px solid red',
     InputRegular = '1px solid #cdcdcd',
     InputFocused = '1px solid #444444',
     InputIncorrect = '1px solid #ff8282',
     NavItemActiveDark = '2px solid #68B738',
     NavItemActiveLight = '2px solid #ffffff',
-    NavItemMobile = '1px solid #E6E6E6',
-    HorizontalLine = '1px solid #D9D9D9',
+    NavItemMobile = '1px solid #e6e6e6',
+    HorizontalLine = '1px solid #d9d9d9',
 }
 
 export enum BorderColor {
