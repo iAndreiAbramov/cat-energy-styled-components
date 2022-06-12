@@ -13,7 +13,7 @@ export enum Border {
     NavItemActiveDark = '2px solid #68B738',
     NavItemActiveLight = '2px solid #ffffff',
     NavItemMobile = '1px solid #E6E6E6',
-    FooterItemMobile = '1px solid #D9D9D9',
+    HorizontalLine = '1px solid #D9D9D9',
 }
 
 export enum BorderColor {
@@ -26,9 +26,10 @@ export enum FontFamily {
     Arial = "'Arial', sans-serif",
 }
 
-export enum TextColor {
+export enum FontColor {
     Dark = '#000000',
     Light = '#ffffff',
+    Gray = '#444444',
 }
 
 export enum FontWeight {
@@ -50,6 +51,7 @@ export enum BgColor {
     BasicGrayPressed = '#ebebeb',
     Black = '#000000',
     White = '#ffffff',
+    DashGray = '#d9d9d9',
 }
 
 export enum ButtonTextColor {

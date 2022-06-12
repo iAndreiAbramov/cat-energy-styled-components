@@ -1,6 +1,6 @@
 import React from 'react';
 import { ComponentMeta, ComponentStory } from '@storybook/react';
-import { TextColor } from 'constants/style-variables';
+import { FontColor } from 'constants/style-variables';
 
 import { StyledMainTitle } from './StyledMainTitle';
 
@@ -12,5 +12,5 @@ export const Default: ComponentStory<typeof StyledMainTitle> = (args) => (
 
 export const White = Default.bind({});
 White.args = {
-    color: TextColor.Light,
+    color: FontColor.Light,
 };

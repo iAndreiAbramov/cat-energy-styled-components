@@ -1,4 +1,4 @@
-import { BgColor, Border, BreakPoint, FontWeight, TextColor } from 'constants/style-variables';
+import { BgColor, Border, BreakPoint, FontColor, FontWeight } from 'constants/style-variables';
 import styled, { css } from 'styled-components';
 
 export const HeaderWrapper = styled.header`
@@ -141,7 +141,7 @@ export const HeaderNavItem = styled.li<{ isActive: boolean; isWithPromo?: boolea
         font-size: 20px;
         line-height: 1;
         text-transform: uppercase;
-        color: ${TextColor.Dark};
+        color: ${FontColor.Dark};
     }
 
     @media (min-width: ${BreakPoint.TabletLow}) {
@@ -163,13 +163,13 @@ export const HeaderNavItem = styled.li<{ isActive: boolean; isWithPromo?: boolea
     }
 
     @media (min-width: ${BreakPoint.Desktop}) {
-        color: ${({ isWithPromo }) => (isWithPromo ? TextColor.Light : TextColor.Dark)}
+        color: ${({ isWithPromo }) => (isWithPromo ? FontColor.Light : FontColor.Dark)}
             ${({ isActive, isWithPromo }) => {
                 if (isActive && isWithPromo) {
                     return css`
-                        color: ${TextColor.Light};
+                        color: ${FontColor.Light};
                         & a {
-                            color: ${TextColor.Light};
+                            color: ${FontColor.Light};
                         }
                         &:after {
                             content: '';

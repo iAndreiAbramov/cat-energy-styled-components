@@ -29,7 +29,7 @@ export const LogoWrapper = styled.div`
 
     width: 100%;
     height: 96px;
-    border-bottom: ${Border.FooterItemMobile};
+    border-bottom: ${Border.HorizontalLine};
 
     @media (min-width: ${BreakPoint.TabletLow}) {
         border-bottom: none;
@@ -45,7 +45,7 @@ export const SocialsWrapper = styled.div`
     height: 62px;
 
     width: 100%;
-    border-bottom: ${Border.FooterItemMobile};
+    border-bottom: ${Border.HorizontalLine};
 
     @media (min-width: ${BreakPoint.TabletLow}) {
         border-bottom: none;

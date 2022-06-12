@@ -1,4 +1,4 @@
-import { Border, FontFamily, TextColor } from 'constants/style-variables';
+import { Border, FontColor, FontFamily } from 'constants/style-variables';
 import styled from 'styled-components';
 
 interface IStyledCheckboxLabel {
@@ -16,7 +16,7 @@ export const StyledCheckboxLabel = styled.label<IStyledCheckboxLabel>`
     font-family: ${FontFamily.Oswald};
     font-weight: 400;
     font-size: 20px;
-    color: ${TextColor.Dark};
+    color: ${FontColor.Dark};
     text-transform: uppercase;
 
     opacity: ${(props) => (props.isDisabled ? 0.3 : 1)};

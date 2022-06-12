@@ -1,4 +1,4 @@
-import { BreakPoint, TextColor } from 'constants/style-variables';
+import { BreakPoint, FontColor } from 'constants/style-variables';
 import { StyledContainer } from 'elements/StyledContainer';
 import styled from 'styled-components';
 
@@ -98,12 +98,12 @@ export const TextWrapper = styled.div`
 export const StyledPromoText = styled.span`
     font-weight: 400;
     font-size: 14px;
-    color: ${TextColor.Light};
+    color: ${FontColor.Light};
     text-transform: uppercase;
 
     @media (min-width: ${BreakPoint.TabletLow}) {
         font-size: 20px;
-        color: ${TextColor.Dark};
+        color: ${FontColor.Dark};
         text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
     }
 
