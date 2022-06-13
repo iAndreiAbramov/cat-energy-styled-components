@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const HiddenHint = styled.span`
+export const SHiddenHint = styled.span`
     position: absolute;
     width: 1px;
     height: 1px;

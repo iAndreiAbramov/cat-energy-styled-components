@@ -1,11 +1,10 @@
 import React from 'react';
 import { ComponentMeta, ComponentStory } from '@storybook/react';
+import { STextLogo } from 'styled-elements/STextLogo';
 
-import { StyledTextLogo } from './index';
+export default {} as ComponentMeta<typeof STextLogo>;
 
-export default {} as ComponentMeta<typeof StyledTextLogo>;
-
-export const Footer: ComponentStory<typeof StyledTextLogo> = (args) => <StyledTextLogo {...args} />;
+export const Footer: ComponentStory<typeof STextLogo> = (args) => <STextLogo {...args} />;
 
 export const MobileHeader = Footer.bind({});
 MobileHeader.args = {

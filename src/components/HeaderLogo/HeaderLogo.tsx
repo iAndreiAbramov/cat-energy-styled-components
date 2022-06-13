@@ -1,11 +1,11 @@
 import React from 'react';
 import { BreakPoint } from 'constants/style-variables';
 
-import { LogoWrapper } from './HeaderLogo.styled';
+import * as S from './HeaderLogo.styled';
 
 export const HeaderLogo: React.FC = () => {
     return (
-        <LogoWrapper>
+        <S.LogoWrapper>
             <picture>
                 <source
                     srcSet="/img/icons/logo-tablet.svg"
@@ -26,6 +26,6 @@ export const HeaderLogo: React.FC = () => {
                     height="38"
                 />
             </picture>
-        </LogoWrapper>
+        </S.LogoWrapper>
     );
 };

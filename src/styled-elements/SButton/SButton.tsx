@@ -14,7 +14,7 @@ export interface IButtonProps {
     colorType?: ButtonColorType;
 }
 
-export const StyledButton = styled.button<IButtonProps>`
+export const SButton = styled.button<IButtonProps>`
     display: block;
 
     width: ${({ width }) => width || '100%'};

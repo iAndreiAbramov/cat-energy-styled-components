@@ -1,19 +1,12 @@
 import React, { useCallback, useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { AppRoute } from 'constants/AppRoute';
-import { HiddenHint } from 'elements/HiddenHint';
-import { StyledTextLogo } from 'elements/StyledTextLogo';
+import { SHiddenHint } from 'styled-elements/SHiddenHint';
+import { STextLogo } from 'styled-elements/STextLogo';
 
 import { HeaderLogo } from 'components/HeaderLogo';
 
-import {
-    BurgerDash,
-    HeaderBurger,
-    HeaderNavigation,
-    HeaderNavItem,
-    HeaderNavList,
-    HeaderWrapper,
-} from './PageHeader.styled';
+import * as S from './PageHeader.styled';
 
 export const PageHeader: React.FC = () => {
     const { pathname } = useLocation();
@@ -22,41 +15,41 @@ export const PageHeader: React.FC = () => {
     const handleBurgerClick = useCallback(() => setIsDropDownOpened((current) => !current), []);
 
     return (
-        <HeaderWrapper className="container">
+        <S.HeaderWrapper className="container">
             <Link to={AppRoute.Home()}>
                 <HeaderLogo />
             </Link>
             <Link to={AppRoute.Home()}>
-                <StyledTextLogo isForHeader />
+                <STextLogo isForHeader />
             </Link>
-            <HeaderNavigation isOpened={isDropdownOpened}>
-                <HeaderNavList isOpened={isDropdownOpened}>
-                    <HeaderNavItem
+            <S.HeaderNavigation isOpened={isDropdownOpened}>
+                <S.HeaderNavList isOpened={isDropdownOpened}>
+                    <S.HeaderNavItem
                         isActive={pathname === AppRoute.Home()}
                         isWithPromo={pathname === AppRoute.Home()}
                     >
                         <Link to={AppRoute.Home()}>главная</Link>
-                    </HeaderNavItem>
-                    <HeaderNavItem
+                    </S.HeaderNavItem>
+                    <S.HeaderNavItem
                         isActive={pathname === AppRoute.Catalog()}
                         isWithPromo={pathname === AppRoute.Home()}
                     >
                         <Link to={AppRoute.Catalog()}>каталог продукции</Link>
-                    </HeaderNavItem>
-                    <HeaderNavItem
+                    </S.HeaderNavItem>
+                    <S.HeaderNavItem
                         isActive={pathname === AppRoute.Form()}
                         isWithPromo={pathname === AppRoute.Home()}
                     >
                         <Link to={AppRoute.Form()}>подбор программы</Link>
-                    </HeaderNavItem>
-                </HeaderNavList>
-            </HeaderNavigation>
-            <HeaderBurger isOpened={isDropdownOpened} onClick={handleBurgerClick}>
-                <HiddenHint className="visually-hidden">Открыть меню</HiddenHint>
-                <BurgerDash />
-                <BurgerDash />
-                <BurgerDash />
-            </HeaderBurger>
-        </HeaderWrapper>
+                    </S.HeaderNavItem>
+                </S.HeaderNavList>
+            </S.HeaderNavigation>
+            <S.HeaderBurger isOpened={isDropdownOpened} onClick={handleBurgerClick}>
+                <SHiddenHint className="visually-hidden">Открыть меню</SHiddenHint>
+                <S.BurgerDash />
+                <S.BurgerDash />
+                <S.BurgerDash />
+            </S.HeaderBurger>
+        </S.HeaderWrapper>
     );
 };

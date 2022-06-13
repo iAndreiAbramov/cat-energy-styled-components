@@ -1,7 +1,7 @@
 import { BreakPoint, FontColor, FontFamily, FontWeight } from 'constants/style-variables';
 import styled from 'styled-components';
 
-export const StyledMainTitle = styled.h1`
+export const SPageTitle = styled.h1`
     font-family: ${FontFamily.Oswald};
     font-weight: ${FontWeight.Regular};
     font-size: 60px;

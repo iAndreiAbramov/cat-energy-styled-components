@@ -1,13 +1,13 @@
 import { BgColor, Border, BreakPoint, FontFamily } from 'constants/style-variables';
-import { StyledContainer } from 'elements/StyledContainer';
 import styled from 'styled-components';
+import { SContainer } from 'styled-elements/SContainer';
 
 export const FooterWrapper = styled.footer`
     width: 100%;
     background-color: ${BgColor.BasicGray};
 `;
 
-export const FooterContentWrapper = styled(StyledContainer)`
+export const FooterContentWrapper = styled(SContainer)`
     display: flex;
     flex-direction: column;
     align-items: center;

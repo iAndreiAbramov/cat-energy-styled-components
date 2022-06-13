@@ -1,32 +1,25 @@
 import React from 'react';
 import { BreakPoint } from 'constants/style-variables';
-import { StyledButton } from 'elements/StyledButton';
-import { StyledMainTitle } from 'elements/StyledMainTitle';
+import { SButton } from 'styled-elements/SButton';
+import { SPageTitle } from 'styled-elements/SPageTitle';
 
 import { PageHeader } from 'components/PageHeader';
 
-import {
-    CanWrapper,
-    ImageWrapper,
-    PromoWrapper,
-    SelectButtonContainer,
-    StyledPromoText,
-    TextWrapper,
-} from './Promo.styled';
+import * as S from './Promo.styled';
 
 export const Promo: React.FC = () => {
     return (
-        <PromoWrapper>
+        <S.PromoWrapper>
             <PageHeader />
-            <ImageWrapper />
-            <TextWrapper>
-                <StyledMainTitle>
+            <S.ImageWrapper />
+            <S.TextWrapper>
+                <SPageTitle>
                     Функциональное <br />
                     питание для котов
-                </StyledMainTitle>
-                <StyledPromoText>Занялся собой? Займись котом!</StyledPromoText>
-            </TextWrapper>
-            <CanWrapper>
+                </SPageTitle>
+                <S.PromoText>Занялся собой? Займись котом!</S.PromoText>
+            </S.TextWrapper>
+            <S.CanWrapper>
                 <picture>
                     <source
                         srcSet="/img/pictures/can-mobile.png"
@@ -45,10 +38,10 @@ export const Promo: React.FC = () => {
                         alt="Стакан со вкуснейшим кошачим смузи"
                     />
                 </picture>
-            </CanWrapper>
-            <SelectButtonContainer>
-                <StyledButton>подобрать программу</StyledButton>
-            </SelectButtonContainer>
-        </PromoWrapper>
+            </S.CanWrapper>
+            <S.SelectButtonContainer>
+                <SButton>подобрать программу</SButton>
+            </S.SelectButtonContainer>
+        </S.PromoWrapper>
     );
 };

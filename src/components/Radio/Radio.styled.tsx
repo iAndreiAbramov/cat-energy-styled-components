@@ -5,7 +5,7 @@ interface IStyledRadioLabel {
     isDisabled?: boolean;
 }
 
-export const StyledRadioLabel = styled.label<IStyledRadioLabel>`
+export const RadioLabel = styled.label<IStyledRadioLabel>`
     display: flex;
     align-items: center;
     gap: 20px;
@@ -22,7 +22,7 @@ export const StyledRadioLabel = styled.label<IStyledRadioLabel>`
     }
 `;
 
-export const StyledRadioHidden = styled.input.attrs({ type: 'radio' })`
+export const RadioHidden = styled.input.attrs({ type: 'radio' })`
     position: absolute;
     width: 1px;
     height: 1px;
@@ -33,7 +33,7 @@ export const StyledRadioHidden = styled.input.attrs({ type: 'radio' })`
     clip-path: inset(100%);
 `;
 
-export const StyledRadioVisible = styled.div`
+export const RadioVisible = styled.div`
     box-sizing: border-box;
     width: 40px;
     height: 40px;
@@ -41,7 +41,7 @@ export const StyledRadioVisible = styled.div`
     border: ${Border.InputRegular};
     border-radius: 50%;
 
-    ${StyledRadioHidden}:checked + & {
+    ${RadioHidden}:checked + & {
         background-image: url('/img/icons/radio-active.svg');
         background-repeat: no-repeat;
         background-position: center center;

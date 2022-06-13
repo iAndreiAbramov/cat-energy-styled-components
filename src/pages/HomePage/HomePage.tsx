@@ -1,28 +1,24 @@
 import React from 'react';
 import { explanations } from 'constants/explanations';
 import { features } from 'constants/features';
-import { HiddenHint } from 'elements/HiddenHint';
-import { StyledMain } from 'elements/StyledMain/StyledMain';
+import { SHiddenHint } from 'styled-elements/SHiddenHint';
+import { SMain } from 'styled-elements/SMain';
+import { SSectionTitle } from 'styled-elements/SSectionTitle';
 
 import { ExplanationCard } from 'components/ExplanationCard';
 import { FeatureCard } from 'components/FeatureCard';
 import { PageFooter } from 'components/PageFooter';
 import { Promo } from 'components/Promo';
 
-import {
-    ExplanationContent,
-    ExplanationList,
-    ExplanationTitle,
-    FeatureList,
-} from './HomePage.styled';
+import * as S from './HomePage.styled';
 
 export const HomePage: React.FC = () => {
     return (
         <>
             <Promo />
-            <StyledMain>
-                <FeatureList className="container">
-                    <HiddenHint as="h2">возможности, которые мы предлагаем</HiddenHint>
+            <SMain>
+                <S.FeatureSection className="container">
+                    <SHiddenHint as="h2">возможности, которые мы предлагаем</SHiddenHint>
                     {features.map(({ title, description, icon, linkText }) => (
                         <FeatureCard
                             key={title}
@@ -32,16 +28,16 @@ export const HomePage: React.FC = () => {
                             icon={icon}
                         />
                     ))}
-                </FeatureList>
-                <ExplanationList className="container">
-                    <ExplanationTitle>Как это работает</ExplanationTitle>
-                    <ExplanationContent>
+                </S.FeatureSection>
+                <S.ExplanationSection className="container">
+                    <SSectionTitle>Как это работает</SSectionTitle>
+                    <S.ExplanationContent>
                         {explanations.map(({ icon, text, number }) => (
                             <ExplanationCard key={number} icon={icon} text={text} number={number} />
                         ))}
-                    </ExplanationContent>
-                </ExplanationList>
-            </StyledMain>
+                    </S.ExplanationContent>
+                </S.ExplanationSection>
+            </SMain>
             <PageFooter />
         </>
     );

@@ -1,7 +1,7 @@
 import { Border, BreakPoint, FontFamily } from 'constants/style-variables';
 import styled from 'styled-components';
 
-export const StyledTextarea = styled.textarea`
+export const STextarea = styled.textarea`
     resize: none;
     width: 100%;
     max-width: 100%;

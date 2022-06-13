@@ -1,6 +1,6 @@
 import { BreakPoint, FontColor } from 'constants/style-variables';
-import { StyledContainer } from 'elements/StyledContainer';
 import styled from 'styled-components';
+import { SContainer } from 'styled-elements/SContainer';
 
 export const PromoWrapper = styled.div`
     display: grid;
@@ -95,7 +95,7 @@ export const TextWrapper = styled.div`
     }
 `;
 
-export const StyledPromoText = styled.span`
+export const PromoText = styled.span`
     font-weight: 400;
     font-size: 14px;
     color: ${FontColor.Light};
@@ -128,7 +128,7 @@ export const CanWrapper = styled.div`
     }
 `;
 
-export const SelectButtonContainer = styled(StyledContainer)`
+export const SelectButtonContainer = styled(SContainer)`
     grid-row: button-start/button-end;
     grid-column: content-start/content-end;
     padding: 0;

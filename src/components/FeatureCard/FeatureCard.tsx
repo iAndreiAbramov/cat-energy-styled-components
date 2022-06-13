@@ -1,14 +1,7 @@
 import React, { ReactElement } from 'react';
 import { AppRoute } from 'constants/AppRoute';
 
-import {
-    FeatureCardWrapper,
-    FeatureImageWrapper,
-    FeatureLinkText,
-    FeatureLinkWrapper,
-    FeatureText,
-    FeatureTitle,
-} from './FeatureCard.styled';
+import * as S from './FeatureCard.styled';
 
 interface IFeatureCard {
     title: string;
@@ -19,13 +12,13 @@ interface IFeatureCard {
 
 export const FeatureCard: React.FC<IFeatureCard> = ({ title, description, icon, linkText }) => {
     return (
-        <FeatureCardWrapper>
-            <FeatureTitle>{title}</FeatureTitle>
-            <FeatureImageWrapper>{icon}</FeatureImageWrapper>
-            <FeatureText>{description}</FeatureText>
-            <FeatureLinkWrapper to={AppRoute.Catalog()}>
-                <FeatureLinkText>{linkText}</FeatureLinkText>
-            </FeatureLinkWrapper>
-        </FeatureCardWrapper>
+        <S.FeatureCardWrapper>
+            <S.FeatureTitle>{title}</S.FeatureTitle>
+            <S.FeatureImageWrapper>{icon}</S.FeatureImageWrapper>
+            <S.FeatureText>{description}</S.FeatureText>
+            <S.FeatureLinkWrapper to={AppRoute.Catalog()}>
+                <S.FeatureLinkText>{linkText}</S.FeatureLinkText>
+            </S.FeatureLinkWrapper>
+        </S.FeatureCardWrapper>
     );
 };

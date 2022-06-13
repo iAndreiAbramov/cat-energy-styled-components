@@ -1,7 +1,7 @@
-import { BreakPoint, FontColor } from 'constants/style-variables';
+import { BreakPoint } from 'constants/style-variables';
 import styled from 'styled-components';
 
-export const FeatureList = styled.section`
+export const FeatureSection = styled.section`
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -23,7 +23,7 @@ export const FeatureList = styled.section`
     }
 `;
 
-export const ExplanationList = styled.section`
+export const ExplanationSection = styled.section`
     padding-top: 20px;
     padding-bottom: 20px;
     width: 100%;
@@ -36,23 +36,6 @@ export const ExplanationList = styled.section`
     @media (min-width: ${BreakPoint.Desktop}) {
         padding-top: 0;
         padding-bottom: 80px;
-    }
-`;
-
-export const ExplanationTitle = styled.h2`
-    width: 100%;
-    margin-bottom: 40px;
-
-    font-weight: 400;
-    font-size: 36px;
-    color: ${FontColor.Dark};
-    text-align: left;
-
-    @media (min-width: ${BreakPoint.TabletLow}) {
-        margin-bottom: 70px;
-        font-weight: 400;
-        font-size: 60px;
-        color: ${FontColor.Dark};
     }
 `;
 
@@ -74,4 +57,12 @@ export const ExplanationContent = styled.div`
         justify-content: space-between;
         gap: 94px;
     }
+`;
+
+// title
+// description
+// stats
+
+export const ExampleSection = styled.section`
+    display: flex;
 `;

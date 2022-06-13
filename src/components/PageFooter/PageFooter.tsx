@@ -1,35 +1,29 @@
 import React from 'react';
 import { socials } from 'constants/socials';
-import { StyledTextLogo } from 'elements/StyledTextLogo';
+import { STextLogo } from 'styled-elements/STextLogo';
 
 import { AcademyLogo } from 'components/AcademyLogo';
 import { FooterSocial } from 'components/FooterSocial';
 
-import {
-    AcademyLogoWrapper,
-    FooterContentWrapper,
-    FooterWrapper,
-    LogoWrapper,
-    SocialsWrapper,
-} from './PageFooter.styled';
+import * as S from './PageFooter.styled';
 
 export const PageFooter: React.FC = () => {
     return (
-        <FooterWrapper>
-            <FooterContentWrapper>
-                <LogoWrapper>
-                    <StyledTextLogo />
-                </LogoWrapper>
-                <SocialsWrapper>
+        <S.FooterWrapper>
+            <S.FooterContentWrapper>
+                <S.LogoWrapper>
+                    <STextLogo />
+                </S.LogoWrapper>
+                <S.SocialsWrapper>
                     {socials.map((social) => (
                         <FooterSocial social={social} key={social.name} />
                     ))}
-                </SocialsWrapper>
-                <AcademyLogoWrapper>
+                </S.SocialsWrapper>
+                <S.AcademyLogoWrapper>
                     <span>HTML Academy</span>
                     <AcademyLogo />
-                </AcademyLogoWrapper>
-            </FooterContentWrapper>
-        </FooterWrapper>
+                </S.AcademyLogoWrapper>
+            </S.FooterContentWrapper>
+        </S.FooterWrapper>
     );
 };
