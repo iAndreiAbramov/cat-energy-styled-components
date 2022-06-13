@@ -1,6 +1,7 @@
 import React from 'react';
 import { explanations } from 'constants/explanations';
 import { features } from 'constants/features';
+import { SContainer } from 'styled-elements/SContainer';
 import { SHiddenHint } from 'styled-elements/SHiddenHint';
 import { SMain } from 'styled-elements/SMain';
 import { SSectionTitle } from 'styled-elements/SSectionTitle';
@@ -37,6 +38,11 @@ export const HomePage: React.FC = () => {
                         ))}
                     </S.ExplanationContent>
                 </S.ExplanationSection>
+                <S.ExampleSection>
+                    <SContainer>
+                        <SSectionTitle>Живой пример</SSectionTitle>
+                    </SContainer>
+                </S.ExampleSection>
             </SMain>
             <PageFooter />
         </>

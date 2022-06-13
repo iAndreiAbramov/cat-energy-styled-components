@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
-import { BgColor, Border, BreakPoint, FontColor, FontFamily } from 'constants/style-variables';
+import { BgColor, Border, BreakPoint, FontColor } from 'constants/style-variables';
 import styled from 'styled-components';
+import { SRegularText } from 'styled-elements/SRegularText';
 
 export const FeatureImageWrapper = styled.div`
     position: absolute;
@@ -68,18 +69,10 @@ export const FeatureTitle = styled.h3`
     }
 `;
 
-export const FeatureText = styled.p`
+export const FeatureText = styled(SRegularText)`
     flex: 1 0 80px;
-
     padding: 0;
     margin-top: 30px;
-
-    font-family: ${FontFamily.Arial};
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 1.3;
-    color: ${FontColor.Gray};
-
     border-bottom: ${Border.HorizontalLine};
 
     @media (min-width: ${BreakPoint.TabletLow}) and (max-width: ${BreakPoint.TabletTop}) {

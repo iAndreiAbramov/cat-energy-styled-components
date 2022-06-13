@@ -1,5 +1,6 @@
 import { BgColor, BreakPoint, FontColor, FontFamily } from 'constants/style-variables';
 import styled from 'styled-components';
+import { SRegularText } from 'styled-elements/SRegularText';
 
 export const ExplanationWrapper = styled.article<{ number: string }>`
     position: relative;
@@ -49,12 +50,8 @@ export const ExplanationImageWrapper = styled.div`
     }
 `;
 
-export const ExplanationText = styled.p`
+export const ExplanationText = styled(SRegularText)`
     padding-top: 4px;
-    font-family: ${FontFamily.Arial};
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 1.3;
     color: ${FontColor.Gray};
 
     @media (min-width: ${BreakPoint.TabletLow}) and (max-width: ${BreakPoint.TabletTop}) {

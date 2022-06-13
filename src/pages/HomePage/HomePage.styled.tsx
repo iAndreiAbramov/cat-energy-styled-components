@@ -1,4 +1,4 @@
-import { BreakPoint } from 'constants/style-variables';
+import { BgColor, BreakPoint } from 'constants/style-variables';
 import styled from 'styled-components';
 
 export const FeatureSection = styled.section`
@@ -59,10 +59,15 @@ export const ExplanationContent = styled.div`
     }
 `;
 
-// title
 // description
 // stats
 
 export const ExampleSection = styled.section`
     display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding-top: 25px;
+    padding-bottom: 40px;
+
+    background-color: ${BgColor.BasicGray};
 `;
