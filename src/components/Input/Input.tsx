@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { StyledInput, StyledInputLabel } from './Input.styled';
+import * as S from './Input.styled';
 
 export interface IInputProps {
     name: string;
@@ -22,9 +22,9 @@ export const Input: React.FC<IInputProps> = ({
     placeholder,
 }) => {
     return (
-        <StyledInputLabel>
+        <S.StyledInputLabel>
             <span>{labelText}</span>
-            <StyledInput
+            <S.StyledInput
                 isIncorrect={isIncorrect}
                 type={type}
                 width={width}
@@ -32,6 +32,6 @@ export const Input: React.FC<IInputProps> = ({
                 name={name}
                 value={value}
             />
-        </StyledInputLabel>
+        </S.StyledInputLabel>
     );
 };

@@ -1,10 +1,6 @@
 import React from 'react';
 
-import {
-    StiledCheckboxHidden,
-    StyledCheckboxLabel,
-    StyledCheckboxVisible,
-} from './Checkbox.styled';
+import * as S from './Checkbox.styled';
 
 export interface ICheckboxProps {
     name: string;
@@ -21,14 +17,14 @@ export const Checkbox: React.FC<ICheckboxProps> = ({
     isDisabled,
     isDefaultChecked,
 }) => (
-    <StyledCheckboxLabel isDisabled={isDisabled}>
-        <StiledCheckboxHidden
+    <S.StyledCheckboxLabel isDisabled={isDisabled}>
+        <S.StiledCheckboxHidden
             disabled={isDisabled}
             defaultChecked={isDefaultChecked}
             name={name}
             value={value}
         />
-        <StyledCheckboxVisible />
+        <S.StyledCheckboxVisible />
         <span>{labelText}</span>
-    </StyledCheckboxLabel>
+    </S.StyledCheckboxLabel>
 );

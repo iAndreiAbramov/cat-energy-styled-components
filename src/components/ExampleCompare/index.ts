@@ -1,0 +1,1 @@
+export { ExampleCompare } from './ExampleCompare';

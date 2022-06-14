@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { StyledRadioHidden, StyledRadioLabel, StyledRadioVisible } from './Radio.styled';
+import * as S from './Radio.styled';
 
 interface IRadioProps {
     name: string;
@@ -17,14 +17,14 @@ export const Radio: React.FC<IRadioProps> = ({
     name,
     value,
 }) => (
-    <StyledRadioLabel isDisabled={isDisabled}>
-        <StyledRadioHidden
+    <S.RadioLabel isDisabled={isDisabled}>
+        <S.RadioHidden
             defaultChecked={isDefaultChecked}
             disabled={isDisabled}
             name={name}
             value={value}
         />
-        <StyledRadioVisible />
+        <S.RadioVisible />
         {labelText}
-    </StyledRadioLabel>
+    </S.RadioLabel>
 );
