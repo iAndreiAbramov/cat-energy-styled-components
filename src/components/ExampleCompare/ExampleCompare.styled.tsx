@@ -71,6 +71,8 @@ export const ProgressButton = styled.button.attrs({ type: 'button' })`
     text-align: center;
     text-transform: uppercase;
     color: ${FontColor.Dark};
+
+    user-select: none;
 `;
 
 export const RangeToggle = styled.input.attrs({ type: 'range' })`

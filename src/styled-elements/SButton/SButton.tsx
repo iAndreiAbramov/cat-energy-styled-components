@@ -8,13 +8,13 @@ import {
 } from 'constants/style-variables';
 import styled, { css } from 'styled-components';
 
-export interface IButtonProps {
+export interface ISButtonProps {
     width?: string;
     height?: string;
     colorType?: ButtonColorType;
 }
 
-export const SButton = styled.button<IButtonProps>`
+export const SButton = styled.button<ISButtonProps>`
     display: block;
 
     width: ${({ width }) => width || '100%'};

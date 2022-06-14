@@ -132,6 +132,7 @@ export const SelectButtonContainer = styled(SContainer)`
     grid-row: button-start/button-end;
     grid-column: content-start/content-end;
     padding: 0;
+    width: 100%;
 
     @media (min-width: ${BreakPoint.TabletLow}) and (max-width: ${BreakPoint.TabletTop}) {
         z-index: 4;

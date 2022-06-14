@@ -1,1 +1,1 @@
-export * from './ExampleCompare';
+export { ExampleCompare } from './ExampleCompare';
