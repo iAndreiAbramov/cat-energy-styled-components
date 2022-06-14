@@ -14,6 +14,7 @@ export enum Border {
     NavItemActiveLight = '2px solid #ffffff',
     NavItemMobile = '1px solid #e6e6e6',
     HorizontalLine = '1px solid #d9d9d9',
+    StatsItem = '1px solid #cdcdcd',
 }
 
 export enum BorderColor {
@@ -51,7 +52,7 @@ export enum BgColor {
     BasicGrayPressed = '#ebebeb',
     Black = '#000000',
     White = '#ffffff',
-    DashGray = '#d9d9d9',
+    InputRange = '#cdcdcd',
 }
 
 export enum ButtonTextColor {
