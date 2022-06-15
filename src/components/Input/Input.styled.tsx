@@ -60,12 +60,6 @@ export const StyledInput = styled.input<IInputStyled>`
                         : '/img/icons/email.svg'});
                     background-repeat: no-repeat;
                     background-position: right 20px top 50%;
-
-                    &:focus {
-                        background-image: url(${isIncorrect
-                            ? '/img/icons/email-red.svg'
-                            : '/img/icons/email-green.svg'});
-                    }
                 `;
             case 'tel':
                 return css`
