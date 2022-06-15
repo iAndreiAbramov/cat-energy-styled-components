@@ -6,7 +6,6 @@ export enum BreakPoint {
 }
 
 export enum Border {
-    Helper = '1px solid red',
     InputRegular = '1px solid #cdcdcd',
     InputFocused = '1px solid #444444',
     InputIncorrect = '1px solid #ff8282',
