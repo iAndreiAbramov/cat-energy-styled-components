@@ -16,6 +16,11 @@ export const StyledInputLabel = styled.label`
     font-size: 20px;
     text-transform: uppercase;
 
+    & span {
+        word-break: keep-all;
+        white-space: nowrap;
+    }
+
     @media (max-width: ${BreakPoint.MobileTop}) {
         font-size: 16px;
     }
@@ -51,22 +56,16 @@ export const StyledInput = styled.input<IInputStyled>`
             case 'email':
                 return css`
                     background-image: url(${isIncorrect
-                        ? '/icons/email-red.svg'
-                        : '/icons/email.svg'});
+                        ? '/img/icons/email-red.svg'
+                        : '/img/icons/email.svg'});
                     background-repeat: no-repeat;
                     background-position: right 20px top 50%;
-
-                    &:focus {
-                        background-image: url(${isIncorrect
-                            ? '/icons/email-red.svg'
-                            : '/icons/email-green.svg'});
-                    }
                 `;
             case 'tel':
                 return css`
                     background-image: url(${isIncorrect
-                        ? '/icons/phone-red.svg'
-                        : '/icons/phone.svg'});
+                        ? '/img/icons/phone-red.svg'
+                        : '/img/icons/phone.svg'});
                     background-repeat: no-repeat;
                     background-position: right 20px top 50%;
                 `;

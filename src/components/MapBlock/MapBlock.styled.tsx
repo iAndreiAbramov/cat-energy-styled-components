@@ -14,7 +14,7 @@ export const InvitationWrapper = styled.div`
     min-height: 112px;
     padding: 26px 20px;
 
-    background-color: ${BgColor.White};
+    background-color: ${BgColor.BasicGray};
 
     @media (min-width: ${BreakPoint.TabletLow}) and (max-width: ${BreakPoint.TabletTop}) {
         min-height: 200px;
@@ -28,6 +28,8 @@ export const InvitationWrapper = styled.div`
 
         min-width: 566px;
         padding: 56px 80px;
+
+        background-color: ${BgColor.White};
     }
 `;
 
