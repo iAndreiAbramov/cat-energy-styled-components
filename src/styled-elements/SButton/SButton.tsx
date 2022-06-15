@@ -32,11 +32,7 @@ export const SButton = styled.button<ISButtonProps>`
     border: none;
     cursor: pointer;
 
-    @media (min-width: ${BreakPoint.Desktop}) {
-        font-size: 20px;
-    }
-
-    @media (min-width: ${BreakPoint.Desktop}) {
+    @media (min-width: ${BreakPoint.TabletLow}) {
         font-size: 20px;
     }
 

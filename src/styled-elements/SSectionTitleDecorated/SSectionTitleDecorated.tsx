@@ -1,4 +1,4 @@
-import { BgColor, FontColor } from 'constants/style-variables';
+import { BgColor, BreakPoint, FontColor } from 'constants/style-variables';
 import styled from 'styled-components';
 
 export const SSectionTitleDecorated = styled.h3`
@@ -21,5 +21,29 @@ export const SSectionTitleDecorated = styled.h3`
         margin-top: 14px;
 
         background-color: ${BgColor.BasicGreen};
+    }
+
+    @media (min-width: ${BreakPoint.TabletLow}) {
+        gap: 14px;
+        width: 100%;
+
+        font-size: 36px;
+        line-height: 1;
+        white-space: nowrap;
+
+        &:after {
+            margin-top: 20px;
+        }
+
+        &:before {
+            content: '';
+
+            display: block;
+            height: 3px;
+            width: 24px;
+            margin-top: 20px;
+
+            background-color: ${BgColor.BasicGreen};
+        }
     }
 `;

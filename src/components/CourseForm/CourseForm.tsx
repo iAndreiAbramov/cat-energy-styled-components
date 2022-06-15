@@ -9,16 +9,18 @@ import * as S from './CourseForm.styled';
 export const CourseForm: React.FC = () => {
     return (
         <S.FormWrapper>
-            <S.GeneraFieldSet className="container" name="general">
-                <Input name="name" labelText="ИМЯ:*" type="text" placeholder="барсик" />
-                <Input name="weight" labelText="Вес (кг):*" type="text" placeholder="7" />
-                <Input name="age" labelText="Возраст (лет):" type="text" placeholder="7" />
-            </S.GeneraFieldSet>
-            <S.PurposeFieldSet className="container" name="purpose">
-                <Radio name="weight-loss" labelText="похудение" isDefaultChecked />
-                <Radio name="weight-grow" labelText="набор массы" />
-                <Radio name="dont-know" labelText="Не знаю (Нужен ваш совет)" />
-            </S.PurposeFieldSet>
+            <S.Row>
+                <S.GeneraFieldSet className="container" name="general">
+                    <Input name="name" labelText="ИМЯ:*" type="text" placeholder="барсик" />
+                    <Input name="weight" labelText="Вес (кг):*" type="text" placeholder="7" />
+                    <Input name="age" labelText="Возраст (лет):" type="text" placeholder="7" />
+                </S.GeneraFieldSet>
+                <S.PurposeFieldSet className="container" name="purpose">
+                    <Radio name="weight-loss" labelText="похудение" isDefaultChecked />
+                    <Radio name="weight-grow" labelText="набор массы" />
+                    <Radio name="dont-know" labelText="Не знаю (Нужен ваш совет)" />
+                </S.PurposeFieldSet>
+            </S.Row>
             <S.HostFieldSet name="host-contacts">
                 <S.Legend as="legend">Контактные данные (владельца кота)</S.Legend>
                 <S.HostInputs className="container">
