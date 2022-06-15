@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { EventHandler, FormEvent } from 'react';
 
 import { Checkbox } from 'components/Checkbox';
 import { Input } from 'components/Input';
@@ -7,18 +7,22 @@ import { Radio } from 'components/Radio';
 import * as S from './CourseForm.styled';
 
 export const CourseForm: React.FC = () => {
+    const handleSubmit: EventHandler<FormEvent<HTMLFormElement>> = (evt) => {
+        evt.preventDefault();
+    };
+
     return (
-        <S.FormWrapper>
-            <S.Row>
-                <S.GeneraFieldSet className="container" name="general">
+        <S.FormWrapper onSubmit={handleSubmit}>
+            <S.Row className="container">
+                <S.GeneraFieldSet name="general">
                     <Input name="name" labelText="ИМЯ:*" type="text" placeholder="барсик" />
                     <Input name="weight" labelText="Вес (кг):*" type="text" placeholder="7" />
                     <Input name="age" labelText="Возраст (лет):" type="text" placeholder="7" />
                 </S.GeneraFieldSet>
-                <S.PurposeFieldSet className="container" name="purpose">
-                    <Radio name="weight-loss" labelText="похудение" isDefaultChecked />
-                    <Radio name="weight-grow" labelText="набор массы" />
-                    <Radio name="dont-know" labelText="Не знаю (Нужен ваш совет)" />
+                <S.PurposeFieldSet>
+                    <Radio name="purpose" labelText="похудение" isDefaultChecked />
+                    <Radio name="purpose" labelText="набор массы" />
+                    <Radio name="purpose" labelText="Не знаю (Нужен ваш совет)" />
                 </S.PurposeFieldSet>
             </S.Row>
             <S.HostFieldSet name="host-contacts">

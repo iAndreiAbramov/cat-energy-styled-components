@@ -19,6 +19,12 @@ export const FormWrapper = styled.form`
 export const Row = styled.div`
     display: flex;
     flex-direction: column;
+
+    @media (min-width: ${BreakPoint.Desktop}) {
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 80px;
+    }
 `;
 
 export const GeneraFieldSet = styled.fieldset`
@@ -32,6 +38,14 @@ export const GeneraFieldSet = styled.fieldset`
     @media (min-width: ${BreakPoint.TabletLow}) and (max-width: ${BreakPoint.TabletTop}) {
         padding-bottom: 72px;
     }
+
+    @media (min-width: ${BreakPoint.Desktop}) {
+        justify-content: space-between;
+        flex: 0 1 50%;
+
+        padding-bottom: 0;
+        border-bottom: none;
+    }
 `;
 
 export const PurposeFieldSet = styled.fieldset`
@@ -42,6 +56,13 @@ export const PurposeFieldSet = styled.fieldset`
     padding-bottom: 24px;
     padding-top: 24px;
     border-bottom: ${Border.HorizontalLine};
+
+    @media (min-width: ${BreakPoint.Desktop}) {
+        flex: 0 1 50%;
+
+        padding: 25px 28px;
+        border: ${Border.InputRegular};
+    }
 `;
 
 export const Legend = styled(SSectionTitleDecorated)`
@@ -58,7 +79,7 @@ export const HostFieldSet = styled.fieldset`
 
     margin-top: 24px;
 
-    @media (min-width: ${BreakPoint.TabletLow}) and (max-width: ${BreakPoint.TabletTop}) {
+    @media (min-width: ${BreakPoint.TabletLow}) {
         margin-top: 76px;
     }
 `;
@@ -70,8 +91,17 @@ export const HostInputs = styled.div`
 
     margin-top: 36px;
 
-    @media (min-width: ${BreakPoint.TabletLow}) and (max-width: ${BreakPoint.TabletTop}) {
+    @media (min-width: ${BreakPoint.TabletLow}) {
         margin-top: 76px;
+    }
+
+    @media (min-width: ${BreakPoint.Desktop}) {
+        flex-direction: row;
+        gap: 78px;
+
+        & label {
+            flex: 0 1 50%;
+        }
     }
 `;
 
@@ -81,12 +111,16 @@ export const HabitsFieldSet = styled.fieldset`
     @media (min-width: ${BreakPoint.TabletLow}) and (max-width: ${BreakPoint.TabletTop}) {
         margin-top: 65px;
     }
+
+    @media (min-width: ${BreakPoint.Desktop}) {
+        margin-top: 70px;
+    }
 `;
 
 export const HabitsInputs = styled.div`
     margin-top: 36px;
 
-    @media (min-width: ${BreakPoint.TabletLow}) and (max-width: ${BreakPoint.TabletTop}) {
+    @media (min-width: ${BreakPoint.TabletLow}) {
         margin-top: 76px;
     }
 `;
@@ -94,7 +128,7 @@ export const HabitsInputs = styled.div`
 export const HabitsTextarea = styled(STextarea)`
     height: 150px;
 
-    @media (min-width: ${BreakPoint.TabletLow}) and (max-width: ${BreakPoint.TabletTop}) {
+    @media (min-width: ${BreakPoint.TabletLow}) {
         height: 174px;
     }
 `;
@@ -102,7 +136,7 @@ export const HabitsTextarea = styled(STextarea)`
 export const ExtraFieldSet = styled.fieldset`
     margin-top: 24px;
 
-    @media (min-width: ${BreakPoint.TabletLow}) and (max-width: ${BreakPoint.TabletTop}) {
+    @media (min-width: ${BreakPoint.TabletLow}) {
         margin-top: 65px;
     }
 `;
@@ -110,16 +144,24 @@ export const ExtraFieldSet = styled.fieldset`
 export const ExtraInputs = styled.div`
     display: flex;
     flex-direction: column;
-    gap: 32px;
+    gap: 13px;
     margin-top: 34px;
 
     @media (min-width: ${BreakPoint.TabletLow}) and (max-width: ${BreakPoint.TabletTop}) {
         flex-direction: row;
         flex-wrap: wrap;
+        gap: 32px;
 
         & label {
-            min-width: 45%;
+            flex: 1 0 45%;
         }
+    }
+
+    @media (min-width: ${BreakPoint.Desktop}) {
+        flex-direction: row;
+        justify-content: space-between;
+        flex-wrap: nowrap;
+        gap: 20px;
     }
 `;
 
@@ -137,12 +179,21 @@ export const SubmitContainer = styled(SContainer)`
         margin-top: 54px;
         gap: 61px;
     }
+
+    @media (min-width: ${BreakPoint.Desktop}) {
+        flex-direction: row;
+        align-items: center;
+        gap: 80px;
+
+        width: 100%;
+        margin-top: 60px;
+    }
 `;
 
 export const SubmitButton = styled(SButton)`
     height: 40px;
 
-    @media (min-width: ${BreakPoint.TabletLow}) and (max-width: ${BreakPoint.TabletTop}) {
+    @media (min-width: ${BreakPoint.TabletLow}) {
         height: 52px;
         max-width: 40%;
     }
