@@ -6,6 +6,7 @@ export enum BreakPoint {
 }
 
 export enum Border {
+    EmptyCard = '2px solid #f2f2f2',
     InputRegular = '1px solid #cdcdcd',
     InputFocused = '1px solid #444444',
     InputIncorrect = '1px solid #ff8282',
@@ -13,6 +14,7 @@ export enum Border {
     NavItemActiveLight = '2px solid #ffffff',
     NavItemMobile = '1px solid #e6e6e6',
     HorizontalLine = '1px solid #d9d9d9',
+    ProductCard = '1px solid #ebebeb',
     StatsItem = '1px solid #cdcdcd',
 }
 
@@ -30,6 +32,7 @@ export enum FontColor {
     Dark = '#000000',
     Light = '#ffffff',
     Gray = '#444444',
+    SpecialGray = '#222222',
 }
 
 export enum FontWeight {
