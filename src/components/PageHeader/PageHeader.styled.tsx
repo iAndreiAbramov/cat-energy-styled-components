@@ -5,6 +5,8 @@ export const HeaderWrapper = styled.header`
     grid-column: page-start/page-end;
     grid-row: header-start/header-end;
     z-index: 9;
+    align-self: center;
+    justify-self: center;
 
     position: relative;
     display: flex;
