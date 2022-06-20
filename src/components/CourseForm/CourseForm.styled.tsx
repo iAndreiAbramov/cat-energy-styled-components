@@ -71,6 +71,10 @@ export const Legend = styled(SSectionTitleDecorated)`
     @media (min-width: ${BreakPoint.TabletLow}) {
         padding-left: 0;
     }
+
+    @media (min-width: ${BreakPoint.Desktop}) {
+        padding-left: 36px;
+    }
 `;
 
 export const HostFieldSet = styled.fieldset`
