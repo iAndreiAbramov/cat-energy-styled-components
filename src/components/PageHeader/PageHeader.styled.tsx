@@ -14,8 +14,8 @@ export const HeaderWrapper = styled.header`
     padding-top: 24px;
     padding-bottom: 24px;
     height: 64px;
-
     width: 100%;
+    max-width: 1440px;
 
     @media (min-width: ${BreakPoint.TabletLow}) and (max-width: ${BreakPoint.TabletTop}) {
         padding-top: 42px;

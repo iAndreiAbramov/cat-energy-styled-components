@@ -6,6 +6,7 @@ import { SPageTitle } from 'styled-elements/SPageTitle';
 export const MainWrapper = styled(SMain)`
     padding-top: 26px;
     padding-bottom: 32px;
+    max-width: 1440px;
 
     @media (min-width: ${BreakPoint.TabletLow}) and (max-width: ${BreakPoint.TabletTop}) {
         padding-top: 30px;
