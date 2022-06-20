@@ -1,4 +1,6 @@
-import React from 'react';
+import React, { useCallback } from 'react';
+import { useNavigate } from 'react-router-dom';
+import { AppRoute } from 'constants/AppRoute';
 import { BreakPoint } from 'constants/style-variables';
 import { SButton } from 'styled-elements/SButton';
 import { SPageTitle } from 'styled-elements/SPageTitle';
@@ -8,6 +10,12 @@ import { PageHeader } from 'components/PageHeader';
 import * as S from './Promo.styled';
 
 export const Promo: React.FC = () => {
+    const navigate = useNavigate();
+
+    const handleButtonClick = useCallback(() => {
+        navigate(AppRoute.Form());
+    }, [navigate]);
+
     return (
         <S.PromoWrapper>
             <PageHeader />
@@ -40,7 +48,7 @@ export const Promo: React.FC = () => {
                 </picture>
             </S.CanWrapper>
             <S.SelectButtonContainer>
-                <SButton>подобрать программу</SButton>
+                <SButton onClick={handleButtonClick}>подобрать программу</SButton>
             </S.SelectButtonContainer>
         </S.PromoWrapper>
     );

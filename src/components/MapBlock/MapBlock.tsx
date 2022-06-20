@@ -38,7 +38,10 @@ export const MapBlock: React.FC = () => {
                 onMouseLeave={handleMapMouseLeave}
                 title="Кликните по карте для взаимодействия"
             >
-                <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A62e81ce561876e07377615a9d5bdd031a5ff2d634367a6a66c65dcc68c7469b3&amp;source=constructor"></iframe>
+                <iframe
+                    title="Мы на Яндекс карте"
+                    src="https://yandex.ru/map-widget/v1/?um=constructor%3A62e81ce561876e07377615a9d5bdd031a5ff2d634367a6a66c65dcc68c7469b3&amp;source=constructor"
+                ></iframe>
             </S.MapContainer>
         </S.MapBlockWrapper>
     );

@@ -24,8 +24,8 @@ export const ExampleCompare: React.FC = () => {
                 <S.ImageWrapperToggle>
                     {progressValue === 0 && (
                         <img
-                            src="/img/pictures/before-mobile.png"
-                            srcSet="/img/pictures/before-mobile.png 1x, /img/pictures/before-mobile@2x.png 2x"
+                            src="/img/pictures/before-mobile.webp"
+                            srcSet="/img/pictures/before-mobile.webp 1x, /img/pictures/before-mobile@2x.webp 2x"
                             alt="Котик до диеты"
                             width="280"
                             height="232"
@@ -33,8 +33,8 @@ export const ExampleCompare: React.FC = () => {
                     )}
                     {progressValue === 1 && (
                         <img
-                            src="/img/pictures/after-mobile.png"
-                            srcSet="/img/pictures/after-mobile.png 1x, /img/pictures/after-mobile@2x.png 2x"
+                            src="/img/pictures/after-mobile.webp"
+                            srcSet="/img/pictures/after-mobile.webp 1x, /img/pictures/after-mobile@2x.webp 2x"
                             alt="Котик после диеты"
                             width="243"
                             height="232"
