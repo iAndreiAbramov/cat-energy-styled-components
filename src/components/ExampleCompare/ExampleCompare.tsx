@@ -23,10 +23,22 @@ export const ExampleCompare: React.FC = () => {
             <S.CompareWrapperToggle>
                 <S.ImageWrapperToggle>
                     {progressValue === 0 && (
-                        <img src="/img/pictures/before-mobile.png" alt="Котик до диеты" />
+                        <img
+                            src="/img/pictures/before-mobile.png"
+                            srcSet="/img/pictures/before-mobile.png 1x, /img/pictures/before-mobile@2x.png 2x"
+                            alt="Котик до диеты"
+                            width="280"
+                            height="232"
+                        />
                     )}
                     {progressValue === 1 && (
-                        <img src="/img/pictures/after-mobile.png" alt="Котик после диеты" />
+                        <img
+                            src="/img/pictures/after-mobile.png"
+                            srcSet="/img/pictures/after-mobile.png 1x, /img/pictures/after-mobile@2x.png 2x"
+                            alt="Котик после диеты"
+                            width="243"
+                            height="232"
+                        />
                     )}
                 </S.ImageWrapperToggle>
                 <ProgressWrapperToggle>
@@ -47,13 +59,25 @@ export const ExampleCompare: React.FC = () => {
                         progressValue={progressValue}
                         style={{ clipPath: `inset(0 ${progressValue * 100}% 0 0)` }}
                     >
-                        <img src="/img/pictures/before-mobile.png" alt="Котик до диеты" />
+                        <img
+                            src="/img/pictures/before-desktop.png"
+                            srcSet="/img/pictures/before-desktop.png 1x, /img/pictures/before-desktop@2x.png 2x"
+                            alt="Котик до диеты"
+                            width="677"
+                            height="520"
+                        />
                     </S.PictureWrapperDrag>
                     <S.PictureWrapperDrag
                         progressValue={progressValue}
                         style={{ clipPath: `inset(0 0 0 ${(1 - progressValue) * 100}%)` }}
                     >
-                        <img src="/img/pictures/after-mobile.png" alt="Котик после диеты" />
+                        <img
+                            src="/img/pictures/after-desktop.png"
+                            srcSet="/img/pictures/after-desktop.png 1x, /img/pictures/after-desktop@2x.png 2x"
+                            alt="Котик до диеты"
+                            width="545"
+                            height="520"
+                        />
                     </S.PictureWrapperDrag>
                 </S.ImageWrapperDrag>
                 <ProgressWrapperDrag>
