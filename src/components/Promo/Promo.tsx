@@ -22,13 +22,13 @@ export const Promo: React.FC = () => {
             <S.CanWrapper>
                 <picture>
                     <source
-                        srcSet="/img/pictures/can-mobile.png"
+                        srcSet="/img/pictures/can-mobile.png 1x, /img/pictures/can-mobile@2x.png 2x"
                         media={`(max-width: ${BreakPoint.MobileTop})`}
                         width="280px"
                         height="270px"
                     />
                     <source
-                        srcSet="/img/pictures/can-tablet.png"
+                        srcSet="/img/pictures/can-tablet.png 1x, /img/pictures/can-tablet@2x.png 2x"
                         media={`(min-width: ${BreakPoint.TabletLow}) and (max-width: ${BreakPoint.TabletTop})`}
                         width="710px"
                         height="610px"
