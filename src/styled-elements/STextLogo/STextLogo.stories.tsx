@@ -1,7 +1,9 @@
 import React from 'react';
 import { ComponentMeta, ComponentStory } from '@storybook/react';
-import { STextLogo } from 'styled-elements/STextLogo';
+import { SHeaderTextLogo } from 'styled-elements/STextLogo';
 
-export default {} as ComponentMeta<typeof STextLogo>;
+export default {} as ComponentMeta<typeof SHeaderTextLogo>;
 
-export const Default: ComponentStory<typeof STextLogo> = (args) => <STextLogo {...args} />;
+export const Header: ComponentStory<typeof SHeaderTextLogo> = (args) => (
+    <SHeaderTextLogo {...args} />
+);

@@ -2,7 +2,7 @@ import React, { useCallback, useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { AppRoute } from 'constants/AppRoute';
 import { SHiddenHint } from 'styled-elements/SHiddenHint';
-import { STextLogo } from 'styled-elements/STextLogo';
+import { SHeaderTextLogo } from 'styled-elements/STextLogo';
 
 import { HeaderLogo } from 'components/HeaderLogo';
 
@@ -20,7 +20,7 @@ export const PageHeader: React.FC = () => {
                 <HeaderLogo />
             </Link>
             <Link to={AppRoute.Home()}>
-                <STextLogo isForHeader />
+                <SHeaderTextLogo />
             </Link>
             <S.HeaderNavigation isOpened={isDropdownOpened}>
                 <S.HeaderNavList isOpened={isDropdownOpened}>

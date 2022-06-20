@@ -1,6 +1,6 @@
 import React from 'react';
 import { socials } from 'constants/socials';
-import { STextLogo } from 'styled-elements/STextLogo';
+import { SFooterTextLogo } from 'styled-elements/STextLogo';
 
 import { AcademyLogo } from 'components/AcademyLogo';
 import { FooterSocial } from 'components/FooterSocial';
@@ -14,7 +14,7 @@ export const PageFooter: React.FC = () => {
             <MapBlock />
             <S.FooterContentWrapper>
                 <S.LogoWrapper>
-                    <STextLogo />
+                    <SFooterTextLogo />
                 </S.LogoWrapper>
                 <S.SocialsWrapper>
                     {socials.map((social) => (
