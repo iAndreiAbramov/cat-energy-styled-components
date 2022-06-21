@@ -60,8 +60,8 @@ export const ExampleCompare: React.FC = () => {
                         style={{ clipPath: `inset(0 ${progressValue * 100}% 0 0)` }}
                     >
                         <img
-                            src="/img/pictures/before-desktop.png"
-                            srcSet="/img/pictures/before-desktop.png 1x, /img/pictures/before-desktop@2x.png 2x"
+                            src="/img/pictures/before-desktop.webp"
+                            srcSet="/img/pictures/before-desktop.webp 1x, /img/pictures/before-desktop@2x.webp 2x"
                             alt="Котик до диеты"
                             width="677"
                             height="520"
@@ -72,8 +72,8 @@ export const ExampleCompare: React.FC = () => {
                         style={{ clipPath: `inset(0 0 0 ${(1 - progressValue) * 100}%)` }}
                     >
                         <img
-                            src="/img/pictures/after-desktop.png"
-                            srcSet="/img/pictures/after-desktop.png 1x, /img/pictures/after-desktop@2x.png 2x"
+                            src="/img/pictures/after-desktop.webp"
+                            srcSet="/img/pictures/after-desktop.webp 1x, /img/pictures/after-desktop@2x.webp 2x"
                             alt="Котик до диеты"
                             width="545"
                             height="520"
