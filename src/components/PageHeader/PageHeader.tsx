@@ -15,7 +15,7 @@ export const PageHeader: React.FC = () => {
     const handleBurgerClick = useCallback(() => setIsDropDownOpened((current) => !current), []);
 
     return (
-        <S.HeaderWrapper className="container">
+        <S.HeaderWrapper isWithBorder={pathname !== AppRoute.Home()} className="container">
             <Link to={AppRoute.Home()} aria-label="На главную">
                 <HeaderLogo />
             </Link>

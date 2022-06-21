@@ -1,7 +1,7 @@
 import { BgColor, Border, BreakPoint, FontColor, FontWeight } from 'constants/style-variables';
 import styled, { css } from 'styled-components';
 
-export const HeaderWrapper = styled.header`
+export const HeaderWrapper = styled.header<{ isWithBorder: boolean }>`
     grid-column: page-start/page-end;
     grid-row: header-start/header-end;
     z-index: 9;
@@ -19,16 +19,20 @@ export const HeaderWrapper = styled.header`
     width: 100%;
     max-width: 1440px;
 
+    border-bottom: ${({ isWithBorder }) => (isWithBorder ? Border.HorizontalLine : 'none')};
+
     @media (min-width: ${BreakPoint.TabletLow}) and (max-width: ${BreakPoint.TabletTop}) {
         padding-top: 42px;
         padding-bottom: 42px;
         height: 110px;
+        border-bottom: none;
     }
 
     @media (min-width: ${BreakPoint.Desktop}) {
         padding-top: 70px;
         padding-bottom: 42px;
         height: 140px;
+        border-bottom: none;
     }
 `;
 
@@ -170,9 +174,11 @@ export const HeaderNavItem = styled.li<{ isActive: boolean; isWithPromo?: boolea
                 if (isActive && isWithPromo) {
                     return css`
                         color: ${FontColor.Light};
+
                         & a {
                             color: ${FontColor.Light};
                         }
+
                         &:after {
                             content: '';
                             position: absolute;
