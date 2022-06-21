@@ -23,7 +23,7 @@ export const FooterContentWrapper = styled(SContainer)`
     }
 `;
 
-export const LogoWrapper = styled.a.attrs({ href: AppRoute.Home(), ariaLabel: 'На главную' })`
+export const LogoWrapper = styled.a.attrs({ href: AppRoute.Home(), ['aria-label']: 'На главную' })`
     display: flex;
     align-items: center;
     justify-content: center;
