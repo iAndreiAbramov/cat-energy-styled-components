@@ -49,6 +49,10 @@ export const ImageWrapper = styled.div`
         background-color: #68b738;
     }
 
+    @media (min-resolution: 2dppx) {
+        background-image: url('/img/pictures/promo-bg-mobile@2x.jpg');
+    }
+
     @media (min-width: ${BreakPoint.TabletLow}) and (max-width: ${BreakPoint.TabletTop}) {
         display: none;
     }
@@ -59,6 +63,10 @@ export const ImageWrapper = styled.div`
         height: auto;
 
         background-image: url('/img/pictures/promo-bg-desktop.jpg');
+    }
+
+    @media (min-width: ${BreakPoint.Desktop}) and (min-resolution: 2dppx) {
+        background-image: url('/img/pictures/promo-bg-desktop@2x.jpg');
     }
 `;
 

@@ -55,7 +55,6 @@ export const ImageWrapper = styled.picture`
     align-items: center;
     justify-content: center;
 
-    height: 100%;
     flex: 1 0 140px;
 
     @media (min-width: ${BreakPoint.TabletLow}) {

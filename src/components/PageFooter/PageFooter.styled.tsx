@@ -1,3 +1,4 @@
+import { AppRoute } from 'constants/AppRoute';
 import { BgColor, Border, BreakPoint, FontFamily } from 'constants/style-variables';
 import styled from 'styled-components';
 import { SContainer } from 'styled-elements/SContainer';
@@ -22,7 +23,7 @@ export const FooterContentWrapper = styled(SContainer)`
     }
 `;
 
-export const LogoWrapper = styled.div`
+export const LogoWrapper = styled.a.attrs({ href: AppRoute.Home(), ['aria-label']: 'На главную' })`
     display: flex;
     align-items: center;
     justify-content: center;

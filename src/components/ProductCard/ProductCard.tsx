@@ -9,13 +9,34 @@ interface IProductCardProps {
 }
 
 export const ProductCard: React.FC<IProductCardProps> = ({ product }) => {
-    const { name, type, weight, taste, price, imageBig, imageSmall } = product;
+    const {
+        name,
+        type,
+        weight,
+        taste,
+        price,
+        imageBig,
+        imageBigRetina,
+        imageSmall,
+        imageSmallRetina,
+    } = product;
     return (
         <S.CardOuterWrapper>
             <S.CardInnerWrapper>
                 <S.ImageWrapper>
-                    <source srcSet={imageBig} media={`(min-width:${BreakPoint.TabletLow})`} />
-                    <img src={imageSmall} alt="Изображение товара" />
+                    <source
+                        srcSet={`${imageBig} 1x, ${imageBigRetina} 2x`}
+                        media={`(min-width:${BreakPoint.TabletLow})`}
+                        width={weight > 500 ? '168px' : '160px'}
+                        height={weight > 500 ? '200px' : '172px'}
+                    />
+                    <img
+                        src={imageSmall}
+                        srcSet={`${imageSmall} 1x, ${imageSmallRetina} 2x`}
+                        alt="Изображение товара"
+                        width={weight > 500 ? '84px' : '68px'}
+                        height={weight > 500 ? '100px' : '86px'}
+                    />
                 </S.ImageWrapper>
                 <S.InfoWrapper>
                     <S.InfoTitle>{`${name} ${type} ${weight} г`}</S.InfoTitle>

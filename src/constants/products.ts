@@ -10,6 +10,8 @@ export const products: IProduct[] = [
         price: 700,
         imageSmall: '/img/pictures/catalog-1-small.png',
         imageBig: '/img/pictures/catalog-1-big.png',
+        imageSmallRetina: '/img/pictures/catalog-1-small@2x.png',
+        imageBigRetina: '/img/pictures/catalog-1-big@2x.png',
     },
     {
         id: 2,
@@ -20,6 +22,8 @@ export const products: IProduct[] = [
         price: 1000,
         imageSmall: '/img/pictures/catalog-2-small.png',
         imageBig: '/img/pictures/catalog-2-big.png',
+        imageSmallRetina: '/img/pictures/catalog-2-small@2x.png',
+        imageBigRetina: '/img/pictures/catalog-2-big@2x.png',
     },
     {
         id: 3,
@@ -30,6 +34,8 @@ export const products: IProduct[] = [
         price: 700,
         imageSmall: '/img/pictures/catalog-3-small.png',
         imageBig: '/img/pictures/catalog-3-big.png',
+        imageSmallRetina: '/img/pictures/catalog-3-small@2x.png',
+        imageBigRetina: '/img/pictures/catalog-3-big@2x.png',
     },
     {
         id: 4,
@@ -40,6 +46,8 @@ export const products: IProduct[] = [
         price: 1000,
         imageSmall: '/img/pictures/catalog-4-small.png',
         imageBig: '/img/pictures/catalog-4-big.png',
+        imageSmallRetina: '/img/pictures/catalog-4-small@2x.png',
+        imageBigRetina: '/img/pictures/catalog-4-big@2x.png',
     },
     {
         id: 5,
@@ -50,6 +58,8 @@ export const products: IProduct[] = [
         price: 400,
         imageSmall: '/img/pictures/catalog-5-small.png',
         imageBig: '/img/pictures/catalog-5-big.png',
+        imageSmallRetina: '/img/pictures/catalog-5-small@2x.png',
+        imageBigRetina: '/img/pictures/catalog-5-big@2x.png',
     },
     {
         id: 6,
@@ -60,6 +70,8 @@ export const products: IProduct[] = [
         price: 700,
         imageSmall: '/img/pictures/catalog-6-small.png',
         imageBig: '/img/pictures/catalog-6-big.png',
+        imageSmallRetina: '/img/pictures/catalog-6-small@2x.png',
+        imageBigRetina: '/img/pictures/catalog-6-big@2x.png',
     },
     {
         id: 7,
@@ -70,5 +82,7 @@ export const products: IProduct[] = [
         price: 500,
         imageSmall: '/img/pictures/catalog-7-small.png',
         imageBig: '/img/pictures/catalog-7-big.png',
+        imageSmallRetina: '/img/pictures/catalog-7-small@2x.png',
+        imageBigRetina: '/img/pictures/catalog-7-big@2x.png',
     },
 ];

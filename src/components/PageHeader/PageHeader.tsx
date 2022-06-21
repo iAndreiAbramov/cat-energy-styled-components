@@ -2,7 +2,7 @@ import React, { useCallback, useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { AppRoute } from 'constants/AppRoute';
 import { SHiddenHint } from 'styled-elements/SHiddenHint';
-import { STextLogo } from 'styled-elements/STextLogo';
+import { SHeaderTextLogo } from 'styled-elements/STextLogo';
 
 import { HeaderLogo } from 'components/HeaderLogo';
 
@@ -15,12 +15,12 @@ export const PageHeader: React.FC = () => {
     const handleBurgerClick = useCallback(() => setIsDropDownOpened((current) => !current), []);
 
     return (
-        <S.HeaderWrapper className="container">
-            <Link to={AppRoute.Home()}>
+        <S.HeaderWrapper isWithBorder={pathname !== AppRoute.Home()} className="container">
+            <Link to={AppRoute.Home()} aria-label="На главную">
                 <HeaderLogo />
             </Link>
-            <Link to={AppRoute.Home()}>
-                <STextLogo isForHeader />
+            <Link to={AppRoute.Home()} aria-label="На главную">
+                <SHeaderTextLogo />
             </Link>
             <S.HeaderNavigation isOpened={isDropdownOpened}>
                 <S.HeaderNavList isOpened={isDropdownOpened}>
@@ -28,19 +28,25 @@ export const PageHeader: React.FC = () => {
                         isActive={pathname === AppRoute.Home()}
                         isWithPromo={pathname === AppRoute.Home()}
                     >
-                        <Link to={AppRoute.Home()}>главная</Link>
+                        <Link to={AppRoute.Home()} aria-label="На главную">
+                            главная
+                        </Link>
                     </S.HeaderNavItem>
                     <S.HeaderNavItem
                         isActive={pathname === AppRoute.Catalog()}
                         isWithPromo={pathname === AppRoute.Home()}
                     >
-                        <Link to={AppRoute.Catalog()}>каталог продукции</Link>
+                        <Link to={AppRoute.Catalog()} aria-label="В каталог">
+                            каталог продукции
+                        </Link>
                     </S.HeaderNavItem>
                     <S.HeaderNavItem
                         isActive={pathname === AppRoute.Form()}
                         isWithPromo={pathname === AppRoute.Home()}
                     >
-                        <Link to={AppRoute.Form()}>подбор программы</Link>
+                        <Link to={AppRoute.Form()} aria-label="К подбору программы">
+                            подбор программы
+                        </Link>
                     </S.HeaderNavItem>
                 </S.HeaderNavList>
             </S.HeaderNavigation>

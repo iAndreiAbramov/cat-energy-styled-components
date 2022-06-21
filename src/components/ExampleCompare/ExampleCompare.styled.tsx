@@ -42,7 +42,7 @@ export const ImageWrapperToggle = styled.div`
 }
 `;
 
-export const ProgressWrapperToggle = styled.div`
+export const ProgressWrapperToggle = styled.label`
     display: flex;
     align-items: flex-end;
     justify-content: space-between;
@@ -194,7 +194,7 @@ export const PictureWrapperDrag = styled.div<{ progressValue: number }>`
     }
 `;
 
-export const ProgressWrapperDrag = styled.div`
+export const ProgressWrapperDrag = styled.label`
     display: flex;
     align-items: center;
     justify-content: center;

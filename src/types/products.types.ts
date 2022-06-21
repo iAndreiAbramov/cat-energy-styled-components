@@ -18,5 +18,7 @@ export interface IProduct {
     taste: TasteType;
     price: number;
     imageSmall: string;
+    imageSmallRetina: string;
     imageBig: string;
+    imageBigRetina: string;
 }
